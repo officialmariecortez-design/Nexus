@@ -214,7 +214,6 @@ async function updateKycStatus(req, res) {
     client.release();
   }
 }
-});
 
 
 // Staging portfolio controls. These are administrative accounting adjustments for
