@@ -1,0 +1,137 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Markets — Nexus Markets</title><link rel="stylesheet" href="/nexus-pages.css">
+<style>
+.panel-section{max-width:1100px;margin:0 auto;padding:10px 7vw 40px}
+.panel-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:22px}
+.panel-card h3{margin-top:0}
+.panel-note{color:#9fb0c5;font-size:13px;margin:-6px 0 16px}
+table.prices{width:100%;border-collapse:collapse;font-size:14px}
+table.prices th,table.prices td{text-align:left;padding:10px 8px;border-bottom:1px solid #1b2c41;white-space:nowrap}
+table.prices th{color:#9fb0c5;font-weight:600}
+.up{color:#36d399}.down{color:#fb7185}
+.chart-symbols{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.chart-symbols button{background:#10233a;color:#cfe0f4;border:1px solid #25405e;padding:7px 12px;border-radius:8px;cursor:pointer;font-size:13px}
+.chart-symbols button.active{background:#2d8cff;color:#fff}
+.hidden{display:none}
+</style>
+</head><body data-page="markets"><header class="nav"><a class="brand" href="/index.html">NEXUS MARKETS</a><nav><a href="/index.html">Home</a><a href="/markets.html">Markets</a><a href="/about.html">About</a><a href="/careers.html">Careers</a><a href="/contact.html">Contact</a><a href="/education.html">Education</a><a href="/login.html">Login</a></nav></header>
+<section class="hero"><div class="eyebrow">Nexus Markets</div><h1 data-title>Markets</h1><h2 data-subtitle>Explore global markets from one platform.</h2></section>
+
+<!-- TradingView ticker tape: official live embed (no API key required) -->
+<div id="tv-ticker-tape" class="tradingview-widget-container" style="border-bottom:1px solid #1e334c"></div>
+
+<section class="content"><article class="card"><h3>Overview</h3><div class="body" data-body>Loading content…</div></article><aside class="card links"><h3>Explore Nexus</h3><a href="/markets.html">Market information</a><a href="/education.html">Education centre</a><a href="/trading.html">Open trading</a><a href="/register.html">Create an account</a><a href="/login.html">Client login</a><a href="/contact.html">Contact support</a></aside></section>
+
+<section class="panel-section">
+  <div class="panel-card" id="cmcPanel">
+    <h3>Live Crypto Prices</h3>
+    <p class="panel-note">Data from CoinMarketCap, refreshed automatically. For information only — not an offer or recommendation.</p>
+    <div id="cmcTable">Loading live prices…</div>
+  </div>
+  <div class="panel-card" id="analyticsPanel">
+    <h3>Analytics</h3>
+    <p class="panel-note">Live chart powered by TradingView.</p>
+    <div class="chart-symbols" id="chartSymbols">
+      <button data-symbol="COINBASE:BTCUSD" class="active">BTC/USD</button>
+      <button data-symbol="COINBASE:ETHUSD">ETH/USD</button>
+      <button data-symbol="COINBASE:SOLUSD">SOL/USD</button>
+      <button data-symbol="FX:EURUSD">EUR/USD</button>
+      <button data-symbol="FX:GBPUSD">GBP/USD</button>
+      <button data-symbol="TVC:GOLD">Gold</button>
+    </div>
+    <div id="tv-advanced-chart" style="height:480px"></div>
+  </div>
+</section>
+
+<script>(function(){
+const page=document.body.dataset.page;
+async function load(){try{const r=await fetch('/api/content/'+page);const d=await r.json();const c=d.content||{};document.querySelector('[data-title]').textContent=c.title||'';document.querySelector('[data-subtitle]').textContent=c.subtitle||'';document.querySelector('[data-body]').textContent=c.body||'';}catch(e){}}
+load();
+})();
+</script>
+
+<script>
+// ---- Dashboard-access gating (admin-controlled, signed-in users only) ----
+// Anonymous visitors see the full public markets page. Signed-in users only
+// see the sections their tier has been granted by an admin.
+(async function applyAccess(){
+  const token = localStorage.getItem('nexus_token');
+  if (!token) return; // public visitor: show everything
+  try {
+    const r = await fetch('/api/access/me', { headers: { Authorization: 'Bearer ' + token } });
+    if (!r.ok) return;
+    const d = await r.json();
+    if (d.features?.crypto_prices === false) document.getElementById('cmcPanel').classList.add('hidden');
+    if (d.features?.analytics_charts === false) document.getElementById('analyticsPanel').classList.add('hidden');
+  } catch (e) { /* fail open: leave panels visible */ }
+})();
+
+// ---- CoinMarketCap live prices ----
+function fmtUsd(n){ if(n==null||!isFinite(n)) return '—'; return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:n<1?6:2}).format(n); }
+function fmtPct(n){ if(n==null||!isFinite(n)) return '—'; const s=n>=0?'+':''; return s+n.toFixed(2)+'%'; }
+function fmtBig(n){ if(n==null||!isFinite(n)) return '—'; return new Intl.NumberFormat('en-US',{notation:'compact',maximumFractionDigits:2}).format(n); }
+async function loadPrices(){
+  try{
+    const r = await fetch('/api/market-prices/quotes');
+    const d = await r.json().catch(()=>({}));
+    if (!r.ok) throw new Error(d.error || 'Unable to load live prices right now.');
+    const rows = (d.assets||[]).map(a=>`<tr><td><strong>${a.symbol}</strong><br><span class="panel-note" style="margin:0">${a.name||''}</span></td><td>${fmtUsd(a.price)}</td><td class="${a.percent_change_1h>=0?'up':'down'}">${fmtPct(a.percent_change_1h)}</td><td class="${a.percent_change_24h>=0?'up':'down'}">${fmtPct(a.percent_change_24h)}</td><td class="${a.percent_change_7d>=0?'up':'down'}">${fmtPct(a.percent_change_7d)}</td><td>${fmtBig(a.market_cap)}</td><td>${fmtBig(a.volume_24h)}</td></tr>`).join('');
+    document.getElementById('cmcTable').innerHTML = rows ? `<table class="prices"><tr><th>Asset</th><th>Price</th><th>1h</th><th>24h</th><th>7d</th><th>Market Cap</th><th>Volume (24h)</th></tr>${rows}</table>` : '<p class="panel-note">No price data available.</p>';
+  }catch(e){
+    document.getElementById('cmcTable').innerHTML = `<p class="panel-note">${e.message}</p>`;
+  }
+}
+loadPrices();
+setInterval(loadPrices, 30000);
+
+// ---- TradingView widgets (official embeds, no API key needed) ----
+function mountTickerTape(){
+  const el = document.getElementById('tv-ticker-tape');
+  el.innerHTML = '<div class="tradingview-widget-container__widget"></div>';
+  const script = document.createElement('script');
+  script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js';
+  script.async = true;
+  script.innerHTML = JSON.stringify({
+    symbols: [
+      { proName: 'COINBASE:BTCUSD', title: 'Bitcoin' },
+      { proName: 'COINBASE:ETHUSD', title: 'Ethereum' },
+      { proName: 'COINBASE:SOLUSD', title: 'Solana' },
+      { proName: 'FX:EURUSD', title: 'EUR/USD' },
+      { proName: 'FX:GBPUSD', title: 'GBP/USD' },
+      { proName: 'TVC:GOLD', title: 'Gold' }
+    ],
+    showSymbolLogo: true, colorTheme: 'dark', isTransparent: false, displayMode: 'adaptive', locale: 'en'
+  });
+  el.appendChild(script);
+}
+function mountAdvancedChart(symbol){
+  const el = document.getElementById('tv-advanced-chart');
+  el.innerHTML = '';
+  const container = document.createElement('div');
+  container.className = 'tradingview-widget-container';
+  container.style.height = '100%';
+  const widgetDiv = document.createElement('div');
+  widgetDiv.className = 'tradingview-widget-container__widget';
+  widgetDiv.style.height = '100%';
+  container.appendChild(widgetDiv);
+  const script = document.createElement('script');
+  script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js';
+  script.async = true;
+  script.innerHTML = JSON.stringify({
+    autosize: true, symbol, interval: '60', timezone: 'Etc/UTC', theme: 'dark', style: '1',
+    locale: 'en', enable_publishing: false, allow_symbol_change: true
+  });
+  container.appendChild(script);
+  el.appendChild(container);
+}
+mountTickerTape();
+mountAdvancedChart('COINBASE:BTCUSD');
+document.querySelectorAll('#chartSymbols button').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('#chartSymbols button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    mountAdvancedChart(btn.dataset.symbol);
+  });
+});
+</script>
+<script src="/chatbot-widget.js" defer></script>
+</body></html>

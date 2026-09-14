@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://auth.nexusmarkets.net/register -->
+<html lang="en" x-data="{ darkMode: localStorage.getItem(&#39;theme&#39;) === &#39;light&#39; ? false : true }" :class="{ &#39;dark&#39;: darkMode }" class="dark bg-gray-300 h-full"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="7z5VO5k87yzKVzawrRfePoSWFCAoitZgDwBhmWoi">
+    <title>nexus MARKETS - Create Account</title>
+
+    <!-- Favicon -->
+    <link href="https://auth.nexusmarkets.net/storage/app/public/photos/ICv3mvCSL7ukZ1ph4Uwwbv4M6OR7DLKlmE22sRCD.png" rel="icon" type="image/x-icon">
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./NEXUS MARKETS - Create Account_files/css2" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="./NEXUS MARKETS - Create Account_files/saved_resource"></script>
+    <script>
+        // Set dark mode as default if no preference is stored
+        if (!localStorage.getItem('theme')) {
+            localStorage.setItem('theme', 'dark');
+            document.documentElement.classList.add('dark');
+        }
+
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            200: '#c7d2fe',
+                            300: '#a5b4fc',
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            800: '#3730a3',
+                            900: '#312e81',
+                        },
+                        'glass': 'rgba(255, 255, 255, 0.05)',
+                    },
+                    backdropBlur: {
+                        'xs': '2px',
+                    },
+                    animation: {
+                        'gradient-x': 'gradient-x 15s ease infinite',
+                        'gradient-y': 'gradient-y 15s ease infinite',
+                        'gradient-xy': 'gradient-xy 15s ease infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        'gradient-y': {
+                            '0%, 100%': {
+                                'background-size': '400% 400%',
+                                'background-position': 'center top'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'center center'
+                            }
+                        },
+                        'gradient-x': {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            }
+                        },
+                        'gradient-xy': {
+                            '0%, 100%': {
+                                'background-size': '400% 400%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            }
+                        },
+                        'float': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Alpine.js -->
+    <script src="./NEXUS MARKETS - Create Account_files/cdn.min.js.download" defer=""></script>
+
+    <!-- Lucide Icons -->
+    <script src="./NEXUS MARKETS - Create Account_files/lucide.js.download"></script>
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+
+<link  rel="stylesheet">
+<!-- <link href="404.html" rel="stylesheet" /> -->
+
+<title>nexus MARKETS</title>
+<link rel="manifest" href="https://auth.nexusmarkets.net/temp/custom/js/manifest.json">
+<meta name="theme-color" content="#4D7DE6">
+<meta name="msapplication-navbutton-color" content="#4D7DE6">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#4D7DE6">
+
+
+<meta name="theme-color" content="#4D7DE6">
+<meta name="msapplication-navbutton-color" content="#4D7DE6">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#4D7DE6">
+
+<link href="https://auth.nexusmarkets.net/storage/app/public/photos/ICv3mvCSL7ukZ1ph4Uwwbv4M6OR7DLKlmE22sRCD.png" rel="icon" type="image/x-icon">
+<!-- <link rel="icon" sizes="192x192" href="404.html"> -->
+
+<meta name="keywords" content="nexus MARKETS">
+<meta property="og:image" content="temp/custom/images/icon/icon-310x310.png">
+
+<meta name="msapplication-square310x310logo" content="https://auth.nexusmarkets.net/storage/app/public/photos/ICv3mvCSL7ukZ1ph4Uwwbv4M6OR7DLKlmE22sRCD.png">
+<meta name="msapplication-square70x70logo" content="https://auth.nexusmarkets.net/storage/app/public/photos/ICv3mvCSL7ukZ1ph4Uwwbv4M6OR7DLKlmE22sRCD.png">
+<meta name="msapplication-square150x150logo" content="https://auth.nexusmarkets.net/storage/app/public/photos/ICv3mvCSL7ukZ1ph4Uwwbv4M6OR7DLKlmE22sRCD.png">
+<meta name="msapplication-wide310x150logo" content="https://auth.nexusmarkets.net/storage/app/public/photos/ICv3mvCSL7ukZ1ph4Uwwbv4M6OR7DLKlmE22sRCD.png">
+
+<link rel="apple-touch-icon-precomposed" href="https://auth.nexusmarkets.net/storage/app/public/photos/ICv3mvCSL7ukZ1ph4Uwwbv4M6OR7DLKlmE22sRCD.png">
+<!-- <link rel="apple-touch-icon-precomposed" sizes="57x57" href="404.html" /> -->
+<!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="404.html" /> -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://auth.nexusmarkets.net/storage/app/public/photos/ICv3mvCSL7ukZ1ph4Uwwbv4M6OR7DLKlmE22sRCD.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://auth.nexusmarkets.net/storage/app/public/photos/ICv3mvCSL7ukZ1ph4Uwwbv4M6OR7DLKlmE22sRCD.png">
+
+
+<meta property="og:site_name" content="nexus MARKETS">
+<meta property="og:title" content="Trading With nexus MARKETS">
+<meta name="description" content="nexus MARKETS LIMITED???
+INVEST IN A LEADING
+TRADE AND INVESTMENT
+COMPANY, OPERATING IN
+THE UK.
+SERVICES INCLUDE: FOREX TRADING
+CRYPTOCURRENCIES, STOCKS &amp; COMMODITIES INVESTMENTS. OIL &amp; GAS, REAL ESTATE INVESTMENTS, MARKET
+RESEARCH AND ANALYSIS:
+ASSISTING BOTH INDIVIDUALS &amp; COMPANIES INVEST IN THE
+COMMERCIAL MARKET.TRAINING CLIENTS &amp; INVESTORS TO BECOME
+EXPERTISE.???">
+<meta property="og:description" content="nexus MARKETS LIMITED???
+INVEST IN A LEADING
+TRADE AND INVESTMENT
+COMPANY, OPERATING IN
+THE UK.
+SERVICES INCLUDE: FOREX TRADING
+CRYPTOCURRENCIES, STOCKS &amp; COMMODITIES INVESTMENTS. OIL &amp; GAS, REAL ESTATE INVESTMENTS, MARKET
+RESEARCH AND ANALYSIS:
+ASSISTING BOTH INDIVIDUALS &amp; COMPANIES INVEST IN THE
+COMMERCIAL MARKET.TRAINING CLIENTS &amp; INVESTORS TO BECOME
+EXPERTISE.???">
+<meta property="og:type" content="website">
+
+
+<!-- <link href="404" rel="stylesheet" /> -->
+
+<style>
+        body {
+            overflow-x: hidden;
+        }
+
+        [x-cloak] {
+            display: none !important;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .trading-card {
+            background: rgba(17, 24, 39, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(75, 85, 99, 0.2);
+            box-shadow:
+                0 10px 25px -5px rgba(0, 0, 0, 0.3),
+                0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+
+        .light .trading-card {
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(229, 231, 235, 0.3);
+            box-shadow:
+                0 10px 25px -5px rgba(0, 0, 0, 0.1),
+                0 20px 25px -5px rgba(0, 0, 0, 0.04),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .step-indicator {
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-indicator::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, rgba(79, 70, 229, 0.3) 50%, transparent 100%);
+            transform: translateY(-50%);
+            z-index: -1;
+        }
+
+        .skiptranslate {
+            display: none !important;
+        }
+
+        body {
+            top: 0 !important;
+        }
+    </style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Inter, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.inset-y-0{top:0px;bottom:0px}.left-0{left:0px}.right-0{right:0px}.right-4{right:1rem}.top-4{top:1rem}.bottom-0{bottom:0px}.left-1\/2{left:50%}.z-10{z-index:10}.z-50{z-index:50}.z-40{z-index:40}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-10{margin-top:2.5rem}.mt-2{margin-top:0.5rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-12{height:3rem}.h-3{height:0.75rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-full{height:100%}.h-0\.5{height:0.125rem}.h-8{height:2rem}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-3{width:0.75rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-auto{width:auto}.w-full{width:100%}.w-16{width:4rem}.w-8{width:2rem}.max-w-2xl{max-width:42rem}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes ping{75%, 100%{transform:scale(2);opacity:0}}.animate-ping{animation:ping 1s cubic-bezier(0, 0, 0.2, 1) infinite}.select-none{-webkit-user-select:none;user-select:none}.appearance-none{-webkit-appearance:none;appearance:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded-full{border-radius:9999px}.border{border-width:1px}.border-t{border-top-width:1px}.border-blue-500\/20{border-color:rgb(59 130 246 / 0.2)}.border-gray-600{--tw-border-opacity:1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1))}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81 / var(--tw-border-opacity, 1))}.border-gray-700\/50{border-color:rgb(55 65 81 / 0.5)}.border-green-500\/20{border-color:rgb(34 197 94 / 0.2)}.border-purple-500\/20{border-color:rgb(168 85 247 / 0.2)}.border-gray-200\/50{border-color:rgb(229 231 235 / 0.5)}.bg-blue-500\/10{background-color:rgb(59 130 246 / 0.1)}.bg-blue-500\/20{background-color:rgb(59 130 246 / 0.2)}.bg-gray-300{--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity, 1))}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}.bg-gray-800\/50{background-color:rgb(31 41 55 / 0.5)}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity, 1))}.bg-green-500\/10{background-color:rgb(34 197 94 / 0.1)}.bg-green-500\/20{background-color:rgb(34 197 94 / 0.2)}.bg-purple-500\/10{background-color:rgb(168 85 247 / 0.1)}.bg-purple-500\/20{background-color:rgb(168 85 247 / 0.2)}.bg-white\/80{background-color:rgb(255 255 255 / 0.8)}.bg-blue-500{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.bg-gray-700{--tw-bg-opacity:1;background-color:rgb(55 65 81 / var(--tw-bg-opacity, 1))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-blue-400{--tw-gradient-from:#60a5fa var(--tw-gradient-from-position);--tw-gradient-to:rgb(96 165 250 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-blue-600{--tw-gradient-from:#2563eb var(--tw-gradient-from-position);--tw-gradient-to:rgb(37 99 235 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-blue-900{--tw-gradient-from:#1e3a8a var(--tw-gradient-from-position);--tw-gradient-to:rgb(30 58 138 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-green-600{--tw-gradient-from:#16a34a var(--tw-gradient-from-position);--tw-gradient-to:rgb(22 163 74 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-cyan-400{--tw-gradient-to:#22d3ee var(--tw-gradient-to-position)}.to-emerald-600{--tw-gradient-to:#059669 var(--tw-gradient-to-position)}.to-indigo-600{--tw-gradient-to:#4f46e5 var(--tw-gradient-to-position)}.to-purple-900{--tw-gradient-to:#581c87 var(--tw-gradient-to-position)}.bg-clip-text{-webkit-background-clip:text;background-clip:text}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pl-12{padding-left:3rem}.pl-4{padding-left:1rem}.pr-4{padding-right:1rem}.pr-8{padding-right:2rem}.pt-8{padding-top:2rem}.text-center{text-align:center}.font-sans{font-family:Inter, sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.tracking-wide{letter-spacing:0.025em}.text-blue-300{--tw-text-opacity:1;color:rgb(147 197 253 / var(--tw-text-opacity, 1))}.text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.text-cyan-400{--tw-text-opacity:1;color:rgb(34 211 238 / var(--tw-text-opacity, 1))}.text-gray-200{--tw-text-opacity:1;color:rgb(229 231 235 / var(--tw-text-opacity, 1))}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.text-green-400{--tw-text-opacity:1;color:rgb(74 222 128 / var(--tw-text-opacity, 1))}.text-purple-400{--tw-text-opacity:1;color:rgb(192 132 252 / var(--tw-text-opacity, 1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.text-transparent{color:transparent}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.underline-offset-2{text-underline-offset:2px}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.placeholder-gray-400::placeholder{--tw-placeholder-opacity:1;color:rgb(156 163 175 / var(--tw-placeholder-opacity, 1))}.opacity-20{opacity:0.2}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-inset{--tw-ring-inset:inset}.ring-transparent{--tw-ring-color:transparent}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-150{transition-duration:150ms}.duration-200{transition-duration:200ms}.duration-300{transition-duration:300ms}.hover\:-translate-y-0\.5:hover{--tw-translate-y:-0.125rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-800\/50:hover{background-color:rgb(31 41 55 / 0.5)}.hover\:from-blue-700:hover{--tw-gradient-from:#1d4ed8 var(--tw-gradient-from-position);--tw-gradient-to:rgb(29 78 216 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:from-green-700:hover{--tw-gradient-from:#15803d var(--tw-gradient-from-position);--tw-gradient-to:rgb(21 128 61 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:to-emerald-700:hover{--tw-gradient-to:#047857 var(--tw-gradient-to-position)}.hover\:to-indigo-700:hover{--tw-gradient-to:#4338ca var(--tw-gradient-to-position)}.hover\:text-blue-300:hover{--tw-text-opacity:1;color:rgb(147 197 253 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.hover\:ring-blue-400\/20:hover{--tw-ring-color:rgb(96 165 250 / 0.2)}.focus\:border-blue-400:focus{--tw-border-opacity:1;border-color:rgb(96 165 250 / var(--tw-border-opacity, 1))}.focus\:bg-gray-800:focus{--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-blue-400\/20:focus{--tw-ring-color:rgb(96 165 250 / 0.2)}.group:focus-within .group-focus-within\:text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:-translate-x-1{--tw-translate-x:-0.25rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:translate-x-1{--tw-translate-x:0.25rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:rotate-12{--tw-rotate:12deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.dark\:border-gray-700\/50:is(.dark *){border-color:rgb(55 65 81 / 0.5)}.dark\:bg-gray-900\/90:is(.dark *){background-color:rgb(17 24 39 / 0.9)}.dark\:text-gray-300:is(.dark *){--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.dark\:hover\:bg-gray-800:hover:is(.dark *){--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}@media (min-width: 640px){.sm\:block{display:block}.sm\:h-16{height:4rem}.sm\:h-10{height:2.5rem}.sm\:h-5{height:1.25rem}.sm\:w-10{width:2.5rem}.sm\:w-5{width:1.25rem}.sm\:grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:justify-center{justify-content:center}.sm\:gap-6{gap:1.5rem}.sm\:space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.sm\:rounded-3xl{border-radius:1.5rem}.sm\:p-8{padding:2rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:py-12{padding-top:3rem;padding-bottom:3rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width: 1024px){.lg\:p-10{padding:2.5rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:text-4xl{font-size:2.25rem;line-height:2.5rem}.lg\:text-lg{font-size:1.125rem;line-height:1.75rem}}</style><style class="gtranslate_css">div.skiptranslate,#google_translate_element2{display:none!important}body{top:0!important}font font{background-color:transparent!important;box-shadow:none!important;position:initial!important}.gt_float_switcher{font-family:Arial;font-size:20px;border-radius:2px;color:#555;display:inline-block;line-height:20px;box-shadow:rgba(0,0,0,0.15) 0 5px 15px;background:#fff;overflow:hidden;transition:all .5s cubic-bezier(0.4, 0, 1, 1)}.gt_float_switcher img{vertical-align:middle;display:inline-block;width:33px;height:auto;margin:0 5px 0 0;border-radius:3px}.gt_float_switcher .gt_options{position:relative;z-index:777;max-height:250px;overflow-y:auto;transform:translateY(-30px);opacity:0;cursor:pointer;transition:all .8s cubic-bezier(.3,1.1,.4,1.1)}.gt_float_switcher .gt_options a{display:block;text-decoration:none;padding:6px 15px;color:#444;transition:color .4s linear}.gt_float_switcher .gt-selected{position:relative;z-index:888;background-color:#fff;cursor:pointer;text-transform:uppercase;overflow:hidden;text-align:left}.gt_float_switcher .gt_options.gt-open{opacity:1;transform:translateX(0px)}.gt_float_switcher .gt_options::-webkit-scrollbar-track{background-color:#f5f5f5}.gt_float_switcher .gt_options::-webkit-scrollbar{width:5px}.gt_float_switcher .gt_options::-webkit-scrollbar-thumb{background-color:#888}.gt_float_switcher .gt_options a:hover{background:#6070a0;color:#fff}.gt_float_switcher .gt_options a.gt-current{display:none}.gt_float_switcher .gt-selected .gt-current-lang{padding:6px 15px;color:#333;font-weight:bold}.gt_float_switcher .gt-selected .gt-current-lang span.gt-lang-code{position:relative;top:2px}.gt_float_switcher .gt-selected .gt-current-lang span.gt_float_switcher-arrow{display:inline-block;height:24px;width:15px;vertical-align:middle;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 285 285'><path d='M282 76.5l-14.2-14.3a9 9 0 0 0-13.1 0L142.5 174.4 30.3 62.2a9 9 0 0 0-13.2 0L3 76.5a9 9 0 0 0 0 13.1l133 133a9 9 0 0 0 13.1 0l133-133a9 9 0 0 0 0-13z' style='fill:%23666'/></svg>");background-position:50%;background-size:11px;background-repeat:no-repeat;transition:all .3s;transform:rotate(-180deg)}.gt_float_switcher .gt-selected .gt-current-lang span.gt_float_switcher-arrow.gt_arrow_rotate{transform:rotate(0deg)}</style><style class="gtranslate_css">div.skiptranslate,#google_translate_element2{display:none!important}body{top:0!important}font font{background-color:transparent!important;box-shadow:none!important;position:initial!important}.gt_float_switcher{font-family:Arial;font-size:20px;border-radius:2px;color:#555;display:inline-block;line-height:20px;box-shadow:rgba(0,0,0,0.15) 0 5px 15px;background:#fff;overflow:hidden;transition:all .5s cubic-bezier(0.4, 0, 1, 1)}.gt_float_switcher img{vertical-align:middle;display:inline-block;width:33px;height:auto;margin:0 5px 0 0;border-radius:3px}.gt_float_switcher .gt_options{position:relative;z-index:777;max-height:250px;overflow-y:auto;transform:translateY(-30px);opacity:0;cursor:pointer;transition:all .8s cubic-bezier(.3,1.1,.4,1.1)}.gt_float_switcher .gt_options a{display:block;text-decoration:none;padding:6px 15px;color:#444;transition:color .4s linear}.gt_float_switcher .gt-selected{position:relative;z-index:888;background-color:#fff;cursor:pointer;text-transform:uppercase;overflow:hidden;text-align:left}.gt_float_switcher .gt_options.gt-open{opacity:1;transform:translateX(0px)}.gt_float_switcher .gt_options::-webkit-scrollbar-track{background-color:#f5f5f5}.gt_float_switcher .gt_options::-webkit-scrollbar{width:5px}.gt_float_switcher .gt_options::-webkit-scrollbar-thumb{background-color:#888}.gt_float_switcher .gt_options a:hover{background:#6070a0;color:#fff}.gt_float_switcher .gt_options a.gt-current{display:none}.gt_float_switcher .gt-selected .gt-current-lang{padding:6px 15px;color:#333;font-weight:bold}.gt_float_switcher .gt-selected .gt-current-lang span.gt-lang-code{position:relative;top:2px}.gt_float_switcher .gt-selected .gt-current-lang span.gt_float_switcher-arrow{display:inline-block;height:24px;width:15px;vertical-align:middle;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 285 285'><path d='M282 76.5l-14.2-14.3a9 9 0 0 0-13.1 0L142.5 174.4 30.3 62.2a9 9 0 0 0-13.2 0L3 76.5a9 9 0 0 0 0 13.1l133 133a9 9 0 0 0 13.1 0l133-133a9 9 0 0 0 0-13z' style='fill:%23666'/></svg>");background-position:50%;background-size:11px;background-repeat:no-repeat;transition:all .3s;transform:rotate(-180deg)}.gt_float_switcher .gt-selected .gt-current-lang span.gt_float_switcher-arrow.gt_arrow_rotate{transform:rotate(0deg)}</style></head>
+
+
+    
+
+
+<body class="h-full bg-gray-300 font-sans antialiased transition-colors duration-300 text-gray-900 dark" x-data="{ darkMode: localStorage.theme === &#39;dark&#39; || !localStorage.theme }" :class="{ &#39;dark&#39;: darkMode }">
+    
+    
+    <!-- Theme Toggle (Hidden but accessible) -->
+    <div class="fixed top-4 right-4 z-50">
+        
+        
+        <button x-data="{ darkMode: localStorage.getItem(&#39;theme&#39;) === &#39;dark&#39; || !localStorage.getItem(&#39;theme&#39;) }" @click="darkMode = !darkMode; localStorage.setItem(&#39;theme&#39;, darkMode ? &#39;dark&#39; : &#39;light&#39;); document.documentElement.classList.toggle(&#39;dark&#39;, darkMode)" class="relative inline-flex items-center justify-center w-10 h-10 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-150 backdrop-blur-sm" :aria-pressed="darkMode" aria-pressed="true">
+            <svg x-show="!darkMode" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="display: none;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 12.728l-.707-.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+            <svg x-show="darkMode" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+            <span class="absolute inset-0 rounded-lg ring-2 ring-inset ring-transparent transition-colors duration-150 hover:ring-blue-400/20"></span>
+        </button>
+    </div>
+
+    <!-- Main Content Wrapper -->
+    <div class="relative min-h-screen overflow-hidden">
+        <!-- Content -->
+        <div class="relative z-10">
+            
+<!-- Fintech Trading Platform Registration -->
+<div class="min-h-screen bg-gray-900 relative overflow-hidden py-8 sm:py-12">
+    <div class="relative z-10 flex items-center justify-center px-4 sm:px-6 lg:px-8">
+        <div class="w-full max-w-2xl">
+            <!-- Professional Trading Registration Card -->
+            <div class="bg-gray-900 border border-gray-700 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl" x-data="registrationForm()">
+
+                <!-- Header Section -->
+                <div class="text-center mb-8">
+                    <!-- Logo -->
+                    <div class="flex items-center justify-center mb-6">
+                        <img src="./NEXUS MARKETS - Create Account_files/PK9VRoxoJe2IkbRXBsLy0UvCnzpqJ7yeSXclPPNR.png" class="h-12 sm:h-16 w-auto" alt="nexus MARKETS">
+                    </div>
+
+                    <!-- Title -->
+                    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2">
+                        Join <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">nexus MARKETS</span>
+                    </h1>
+                    <p class="text-gray-300 text-sm sm:text-base lg:text-lg mb-6">
+                        Start your professional trading journey
+                    </p>
+
+                    <!-- Trading Stats - Mobile Responsive -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-xs sm:text-sm">
+                        <!--<div class="text-center p-3 bg-gray-800/50 rounded-xl border border-gray-700/50">-->
+                        <!--    <div class="flex items-center justify-center gap-1 text-green-400 mb-1">-->
+                        <!--        <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>-->
+                        <!--        <span class="font-semibold">99.9% Uptime</span>-->
+                        <!--    </div>-->
+                        <!--    <div class="text-gray-400">Reliable Platform</div>-->
+                        <!--</div>-->
+                        <!--<div class="text-center p-3 bg-gray-800/50 rounded-xl border border-gray-700/50">-->
+                        <!--    <div class="flex items-center justify-center gap-1 text-blue-400 mb-1">-->
+                        <!--        <i data-lucide="shield-check" class="w-3 h-3"></i>-->
+                        <!--        <span class="font-semibold">Bank-Grade</span>-->
+                        <!--    </div>-->
+                        <!--    <div class="text-gray-400">Security</div>-->
+                        <!--</div>-->
+                        <div class="text-center p-3 bg-gray-800/50 rounded-xl border border-gray-700/50">
+                            <div class="flex items-center justify-center gap-1 text-cyan-400 mb-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="users" aria-hidden="true" class="lucide lucide-users w-3 h-3"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                                <span class="font-semibold">1M+ Traders</span>
+                            </div>
+                            <div class="text-gray-400">Community</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enhanced Progress Steps - Mobile Optimized -->
+                <div class="mb-8">
+                    <div class="flex items-center justify-between sm:justify-center sm:space-x-8">
+                        <template x-for="(step, index) in steps" :key="index"></template><div class="flex flex-col items-center">
+                                <!-- Step Circle -->
+                                <div class="relative mb-2">
+                                    <div class="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 bg-blue-500 text-white" :class="currentStep &gt; index ? &#39;bg-green-500 text-white&#39; :
+                                                currentStep === index ? &#39;bg-blue-500 text-white&#39; :
+                                                &#39;bg-gray-700 text-gray-400&#39;">
+                                        <span x-show="currentStep &lt;= index" x-text="index + 1">1</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" x-show="currentStep &gt; index" class="lucide lucide-check w-4 h-4 sm:w-5 sm:h-5" style="display: none;"><path d="M20 6 9 17l-5-5"></path></svg>
+                                    </div>
+                                    <!-- Active Step Pulse -->
+                                    <div x-show="currentStep === index" class="absolute inset-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-blue-500 animate-ping opacity-20"></div>
+                                </div>
+
+                                <!-- Step Label -->
+                                <div class="text-center">
+                                    <div class="text-xs sm:text-sm font-medium transition-colors duration-300 text-white" :class="currentStep &gt;= index ? &#39;text-white&#39; : &#39;text-gray-500&#39;" x-text="step.title">Personal Info</div>
+                                    <div class="text-xs text-gray-500 hidden sm:block" x-text="step.description">Basic details</div>
+                                </div>
+
+                                <!-- Connector Line -->
+                                <div x-show="index &lt; steps.length - 1" class="hidden sm:block absolute top-4 left-1/2 w-16 h-0.5 transition-colors duration-300 bg-gray-700" :class="currentStep &gt; index ? &#39;bg-green-500&#39; : &#39;bg-gray-700&#39;" style="transform: translateX(2rem);"></div>
+                            </div><div class="flex flex-col items-center">
+                                <!-- Step Circle -->
+                                <div class="relative mb-2">
+                                    <div class="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 bg-gray-700 text-gray-400" :class="currentStep &gt; index ? &#39;bg-green-500 text-white&#39; :
+                                                currentStep === index ? &#39;bg-blue-500 text-white&#39; :
+                                                &#39;bg-gray-700 text-gray-400&#39;">
+                                        <span x-show="currentStep &lt;= index" x-text="index + 1">2</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" x-show="currentStep &gt; index" class="lucide lucide-check w-4 h-4 sm:w-5 sm:h-5" style="display: none;"><path d="M20 6 9 17l-5-5"></path></svg>
+                                    </div>
+                                    <!-- Active Step Pulse -->
+                                    <div x-show="currentStep === index" class="absolute inset-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-blue-500 animate-ping opacity-20" style="display: none;"></div>
+                                </div>
+
+                                <!-- Step Label -->
+                                <div class="text-center">
+                                    <div class="text-xs sm:text-sm font-medium transition-colors duration-300 text-gray-500" :class="currentStep &gt;= index ? &#39;text-white&#39; : &#39;text-gray-500&#39;" x-text="step.title">Location</div>
+                                    <div class="text-xs text-gray-500 hidden sm:block" x-text="step.description">Regional settings</div>
+                                </div>
+
+                                <!-- Connector Line -->
+                                <div x-show="index &lt; steps.length - 1" class="hidden sm:block absolute top-4 left-1/2 w-16 h-0.5 transition-colors duration-300 bg-gray-700" :class="currentStep &gt; index ? &#39;bg-green-500&#39; : &#39;bg-gray-700&#39;" style="transform: translateX(2rem);"></div>
+                            </div><div class="flex flex-col items-center">
+                                <!-- Step Circle -->
+                                <div class="relative mb-2">
+                                    <div class="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 bg-gray-700 text-gray-400" :class="currentStep &gt; index ? &#39;bg-green-500 text-white&#39; :
+                                                currentStep === index ? &#39;bg-blue-500 text-white&#39; :
+                                                &#39;bg-gray-700 text-gray-400&#39;">
+                                        <span x-show="currentStep &lt;= index" x-text="index + 1">3</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" x-show="currentStep &gt; index" class="lucide lucide-check w-4 h-4 sm:w-5 sm:h-5" style="display: none;"><path d="M20 6 9 17l-5-5"></path></svg>
+                                    </div>
+                                    <!-- Active Step Pulse -->
+                                    <div x-show="currentStep === index" class="absolute inset-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-blue-500 animate-ping opacity-20" style="display: none;"></div>
+                                </div>
+
+                                <!-- Step Label -->
+                                <div class="text-center">
+                                    <div class="text-xs sm:text-sm font-medium transition-colors duration-300 text-gray-500" :class="currentStep &gt;= index ? &#39;text-white&#39; : &#39;text-gray-500&#39;" x-text="step.title">Security</div>
+                                    <div class="text-xs text-gray-500 hidden sm:block" x-text="step.description">Account protection</div>
+                                </div>
+
+                                <!-- Connector Line -->
+                                <div x-show="index &lt; steps.length - 1" class="hidden sm:block absolute top-4 left-1/2 w-16 h-0.5 transition-colors duration-300 bg-gray-700" :class="currentStep &gt; index ? &#39;bg-green-500&#39; : &#39;bg-gray-700&#39;" style="transform: translateX(2rem); display: none;"></div>
+                            </div>
+                    </div>
+                </div>
+
+                <!-- Error Summary Section -->
+                
+                <!-- Registration Form -->
+                <form action="/api/auth/register" method="POST" class="space-y-6" id="register">
+                    <input type="hidden" name="_token" value="7z5VO5k87yzKVzawrRfePoSWFCAoitZgDwBhmWoi">
+                    <!-- Step 1: Personal Information -->
+                    <div x-show="currentStep === 0" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-x-4" x-transition:enter-end="opacity-100 transform translate-x-0">
+
+                        <!-- Step Header -->
+                        <div class="mb-6 p-4 bg-blue-500/10 rounded-xl border border-blue-500/20">
+                            <div class="flex items-center gap-3">
+                                <div class="p-2 bg-blue-500/20 rounded-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="user-circle" aria-hidden="true" class="lucide lucide-user-circle w-5 h-5 text-blue-400"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"></path></svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg sm:text-xl font-bold text-white">Personal Information</h3>
+                                    <p class="text-gray-400 text-sm">Create your trading profile</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                            <!-- Username Field -->
+                            <div class="space-y-2">
+                                <label for="username" class="block text-sm font-bold text-gray-200">
+                                    Trading Username <span class="text-red-400">*</span>
+                                </label>
+                                <div class="relative group">
+                                    <div class="absolute inset-y-0 left-0 flex items-center pl-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="user" aria-hidden="true" class="lucide lucide-user h-5 w-5 text-gray-400 group-focus-within:text-blue-400 transition-colors"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                    </div>
+                                    <input type="text" name="username" id="username" required="" class="block w-full rounded-xl border border-gray-600 bg-gray-900 pl-12 pr-4 py-4 text-white placeholder-gray-400 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 focus:bg-gray-800 transition-all duration-200 text-sm font-bold" placeholder="Choose username">
+                                </div>
+                                                            </div>
+
+                            <!-- Full Name Field -->
+                            <div class="space-y-2">
+                                <label for="name" class="block text-sm font-bold text-gray-200">
+                                    Full Name <span class="text-red-400">*</span>
+                                </label>
+                                <div class="relative group">
+                                    <div class="absolute inset-y-0 left-0 flex items-center pl-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="user-check" aria-hidden="true" class="lucide lucide-user-check h-5 w-5 text-gray-400 group-focus-within:text-blue-400 transition-colors"><path d="m16 11 2 2 4-4"></path><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                                    </div>
+                                    <input type="text" name="name" id="name" required="" class="block w-full rounded-xl border border-gray-600 bg-gray-900 pl-12 pr-4 py-4 text-white placeholder-gray-400 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 focus:bg-gray-800 transition-all duration-200 text-sm font-bold" placeholder="Enter full name">
+                                </div>
+                                                            </div>
+
+                            <!-- Email Field -->
+                            <div class="space-y-2">
+                                <label for="email" class="block text-sm font-bold text-gray-200">
+                                    Email Address <span class="text-red-400">*</span>
+                                </label>
+                                <div class="relative group">
+                                    <div class="absolute inset-y-0 left-0 flex items-center pl-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mail" aria-hidden="true" class="lucide lucide-mail h-5 w-5 text-gray-400 group-focus-within:text-blue-400 transition-colors"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+                                    </div>
+                                    <input type="email" name="email" id="email" required="" class="block w-full rounded-xl border border-gray-600 bg-gray-900 pl-12 pr-4 py-4 text-white placeholder-gray-400 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 focus:bg-gray-800 transition-all duration-200 text-sm font-bold" placeholder="your.email@example.com">
+                                </div>
+                                                            </div>
+
+                            <!-- Phone Field -->
+                            <div class="space-y-2">
+                                <label for="phone" class="block text-sm font-bold text-gray-200">
+                                    Phone Number <span class="text-red-400">*</span>
+                                </label>
+                                <div class="relative group">
+                                    <div class="absolute inset-y-0 left-0 flex items-center pl-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone h-5 w-5 text-gray-400 group-focus-within:text-blue-400 transition-colors"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                                    </div>
+                                    <input type="tel" name="phone" id="phone" required="" class="block w-full rounded-xl border border-gray-600 bg-gray-900 pl-12 pr-4 py-4 text-white placeholder-gray-400 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 focus:bg-gray-800 transition-all duration-200 text-sm font-bold" placeholder="+1 (555) 123-4567">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Step 2: Location & Currency -->
+                <div x-show="currentStep === 1" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-x-4" x-transition:enter-end="opacity-100 transform translate-x-0" style="display: none;">
+
+                    <!-- Step Header -->
+                    <div class="mb-6 p-4 bg-purple-500/10 rounded-xl border border-purple-500/20">
+                        <div class="flex items-center gap-3">
+                            <div class="p-2 bg-purple-500/20 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="globe-2" aria-hidden="true" class="lucide lucide-globe-2 w-5 h-5 text-purple-400"><path d="M21.54 15H17a2 2 0 0 0-2 2v4.54"></path><path d="M7 3.34V5a3 3 0 0 0 3 3a2 2 0 0 1 2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2c0-1.1.9-2 2-2h3.17"></path><path d="M11 21.95V18a2 2 0 0 0-2-2a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-white">Location</h3>
+                                <p class="text-gray-400 text-sm">Set your regional trading preferences</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-1 gap-4 sm:gap-6">
+                        <!-- Country Field -->
+                        <div class="space-y-2">
+                            <label for="country" class="block text-sm font-bold text-gray-200">
+                                Country <span class="text-red-400">*</span>
+                            </label>
+                            <div class="relative group">
+                                <div class="absolute inset-y-0 left-0 flex items-center pl-4 z-10">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="flag" aria-hidden="true" class="lucide lucide-flag h-5 w-5 text-gray-400 group-focus-within:text-blue-400 transition-colors"><path d="M4 22V4a1 1 0 0 1 .4-.8A6 6 0 0 1 8 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10a1 1 0 0 1-.4.8A6 6 0 0 1 16 16c-3 0-5-2-8-2a6 6 0 0 0-4 1.528"></path></svg>
+                                </div>
+                                <select name="country" id="country" required="" class="block w-full rounded-xl border border-gray-600 bg-gray-900 pl-12 pr-8 py-4 text-white focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 focus:bg-gray-800 transition-all duration-200 text-sm font-bold appearance-none">
+                                    <option selected="" disabled="" class="text-gray-400">Select your country</option>
+                                    <option value="Afganistan">Afghanistan</option>
+<option value="Albania">Albania</option>
+<option value="Algeria">Algeria</option>
+<option value="American Samoa">American Samoa</option>
+<option value="Andorra">Andorra</option>
+<option value="Angola">Angola</option>
+<option value="Anguilla">Anguilla</option>
+<option value="Antigua &amp; Barbuda">Antigua &amp; Barbuda</option>
+<option value="Argentina">Argentina</option>
+<option value="Armenia">Armenia</option>
+<option value="Aruba">Aruba</option>
+<option value="Australia">Australia</option>
+<option value="Austria">Austria</option>
+<option value="Azerbaijan">Azerbaijan</option>
+<option value="Bahamas">Bahamas</option>
+<option value="Bahrain">Bahrain</option>
+<option value="Bangladesh">Bangladesh</option>
+<option value="Barbados">Barbados</option>
+<option value="Belarus">Belarus</option>
+<option value="Belgium">Belgium</option>
+<option value="Belize">Belize</option>
+<option value="Benin">Benin</option>
+<option value="Bermuda">Bermuda</option>
+<option value="Bhutan">Bhutan</option>
+<option value="Bolivia">Bolivia</option>
+<option value="Bonaire">Bonaire</option>
+<option value="Bosnia &amp; Herzegovina">Bosnia &amp; Herzegovina</option>
+<option value="Botswana">Botswana</option>
+<option value="Brazil">Brazil</option>
+<option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
+<option value="Brunei">Brunei</option>
+<option value="Bulgaria">Bulgaria</option>
+<option value="Burkina Faso">Burkina Faso</option>
+<option value="Burundi">Burundi</option>
+<option value="Cambodia">Cambodia</option>
+<option value="Cameroon">Cameroon</option>
+<option value="Canada">Canada</option>
+<option value="Canary Islands">Canary Islands</option>
+<option value="Cape Verde">Cape Verde</option>
+<option value="Cayman Islands">Cayman Islands</option>
+<option value="Central African Republic">Central African Republic</option>
+<option value="Chad">Chad</option>
+<option value="Channel Islands">Channel Islands</option>
+<option value="Chile">Chile</option>
+<option value="China">China</option>
+<option value="Christmas Island">Christmas Island</option>
+<option value="Cocos Island">Cocos Island</option>
+<option value="Colombia">Colombia</option>
+<option value="Comoros">Comoros</option>
+<option value="Congo">Congo</option>
+<option value="Cook Islands">Cook Islands</option>
+<option value="Costa Rica">Costa Rica</option>
+<option value="Cote DIvoire">Cote D'Ivoire</option>
+<option value="Croatia">Croatia</option>
+<option value="Cuba">Cuba</option>
+<option value="Curaco">Curacao</option>
+<option value="Cyprus">Cyprus</option>
+<option value="Czech Republic">Czech Republic</option>
+<option value="Denmark">Denmark</option>
+<option value="Djibouti">Djibouti</option>
+<option value="Dominica">Dominica</option>
+<option value="Dominican Republic">Dominican Republic</option>
+<option value="East Timor">East Timor</option>
+<option value="Ecuador">Ecuador</option>
+<option value="Egypt">Egypt</option>
+<option value="El Salvador">El Salvador</option>
+<option value="Equatorial Guinea">Equatorial Guinea</option>
+<option value="Eritrea">Eritrea</option>
+<option value="Estonia">Estonia</option>
+<option value="Ethiopia">Ethiopia</option>
+<option value="Falkland Islands">Falkland Islands</option>
+<option value="Faroe Islands">Faroe Islands</option>
+<option value="Fiji">Fiji</option>
+<option value="Finland">Finland</option>
+<option value="France">France</option>
+<option value="French Guiana">French Guiana</option>
+<option value="French Polynesia">French Polynesia</option>
+<option value="French Southern Ter">French Southern Ter</option>
+<option value="Gabon">Gabon</option>
+<option value="Gambia">Gambia</option>
+<option value="Georgia">Georgia</option>
+<option value="Germany">Germany</option>
+<option value="Ghana">Ghana</option>
+<option value="Gibraltar">Gibraltar</option>
+<option value="Great Britain">Great Britain</option>
+<option value="Greece">Greece</option>
+<option value="Greenland">Greenland</option>
+<option value="Grenada">Grenada</option>
+<option value="Guadeloupe">Guadeloupe</option>
+<option value="Guam">Guam</option>
+<option value="Guatemala">Guatemala</option>
+<option value="Guinea">Guinea</option>
+<option value="Guyana">Guyana</option>
+<option value="Haiti">Haiti</option>
+<option value="Hawaii">Hawaii</option>
+<option value="Honduras">Honduras</option>
+<option value="Hong Kong">Hong Kong</option>
+<option value="Hungary">Hungary</option>
+<option value="Iceland">Iceland</option>
+<option value="India">India</option>
+<option value="Indonesia">Indonesia</option>
+<option value="Iran">Iran</option>
+<option value="Iraq">Iraq</option>
+<option value="Ireland">Ireland</option>
+<option value="Isle of Man">Isle of Man</option>
+<option value="Israel">Israel</option>
+<option value="Italy">Italy</option>
+<option value="Jamaica">Jamaica</option>
+<option value="Japan">Japan</option>
+<option value="Jordan">Jordan</option>
+<option value="Kazakhstan">Kazakhstan</option>
+<option value="Kenya">Kenya</option>
+<option value="Kiribati">Kiribati</option>
+<option value="Korea North">Korea North</option>
+<option value="Korea Sout">Korea South</option>
+<option value="Kuwait">Kuwait</option>
+<option value="Kyrgyzstan">Kyrgyzstan</option>
+<option value="Laos">Laos</option>
+<option value="Latvia">Latvia</option>
+<option value="Lebanon">Lebanon</option>
+<option value="Lesotho">Lesotho</option>
+<option value="Liberia">Liberia</option>
+<option value="Libya">Libya</option>
+<option value="Liechtenstein">Liechtenstein</option>
+<option value="Lithuania">Lithuania</option>
+<option value="Luxembourg">Luxembourg</option>
+<option value="Macau">Macau</option>
+<option value="Macedonia">Macedonia</option>
+<option value="Madagascar">Madagascar</option>
+<option value="Malaysia">Malaysia</option>
+<option value="Malawi">Malawi</option>
+<option value="Maldives">Maldives</option>
+<option value="Mali">Mali</option>
+<option value="Malta">Malta</option>
+<option value="Marshall Islands">Marshall Islands</option>
+<option value="Martinique">Martinique</option>
+<option value="Mauritania">Mauritania</option>
+<option value="Mauritius">Mauritius</option>
+<option value="Mayotte">Mayotte</option>
+<option value="Mexico">Mexico</option>
+<option value="Midway Islands">Midway Islands</option>
+<option value="Moldova">Moldova</option>
+<option value="Monaco">Monaco</option>
+<option value="Mongolia">Mongolia</option>
+<option value="Montserrat">Montserrat</option>
+<option value="Morocco">Morocco</option>
+<option value="Mozambique">Mozambique</option>
+<option value="Myanmar">Myanmar</option>
+<option value="Nambia">Nambia</option>
+<option value="Nauru">Nauru</option>
+<option value="Nepal">Nepal</option>
+<option value="Netherland Antilles">Netherland Antilles</option>
+<option value="Netherlands">Netherlands (Holland, Europe)</option>
+<option value="Nevis">Nevis</option>
+<option value="New Caledonia">New Caledonia</option>
+<option value="New Zealand">New Zealand</option>
+<option value="Nicaragua">Nicaragua</option>
+<option value="Niger">Niger</option>
+<option value="Nigeria">Nigeria</option>
+<option value="Niue">Niue</option>
+<option value="Norfolk Island">Norfolk Island</option>
+<option value="Norway">Norway</option>
+<option value="Oman">Oman</option>
+<option value="Pakistan">Pakistan</option>
+<option value="Palau Island">Palau Island</option>
+<option value="Palestine">Palestine</option>
+<option value="Panama">Panama</option>
+<option value="Papua New Guinea">Papua New Guinea</option>
+<option value="Paraguay">Paraguay</option>
+<option value="Peru">Peru</option>
+<option value="Phillipines">Philippines</option>
+<option value="Pitcairn Island">Pitcairn Island</option>
+<option value="Poland">Poland</option>
+<option value="Portugal">Portugal</option>
+<option value="Puerto Rico">Puerto Rico</option>
+<option value="Qatar">Qatar</option>
+<option value="Republic of Montenegro">Republic of Montenegro</option>
+<option value="Republic of Serbia">Republic of Serbia</option>
+<option value="Reunion">Reunion</option>
+<option value="Romania">Romania</option>
+<option value="Russia">Russia</option>
+<option value="Rwanda">Rwanda</option>
+<option value="St Barthelemy">St Barthelemy</option>
+<option value="St Eustatius">St Eustatius</option>
+<option value="St Helena">St Helena</option>
+<option value="St Kitts-Nevis">St Kitts-Nevis</option>
+<option value="St Lucia">St Lucia</option>
+<option value="St Maarten">St Maarten</option>
+<option value="St Pierre &amp; Miquelon">St Pierre &amp; Miquelon</option>
+<option value="St Vincent &amp; Grenadines">St Vincent &amp; Grenadines</option>
+<option value="Saipan">Saipan</option>
+<option value="Samoa">Samoa</option>
+<option value="Samoa American">Samoa American</option>
+<option value="San Marino">San Marino</option>
+<option value="Sao Tome &amp; Principe">Sao Tome &amp; Principe</option>
+<option value="Saudi Arabia">Saudi Arabia</option>
+<option value="Senegal">Senegal</option>
+<option value="Serbia">Serbia</option>
+<option value="Seychelles">Seychelles</option>
+<option value="Sierra Leone">Sierra Leone</option>
+<option value="Singapore">Singapore</option>
+<option value="Slovakia">Slovakia</option>
+<option value="Slovenia">Slovenia</option>
+<option value="Solomon Islands">Solomon Islands</option>
+<option value="Somalia">Somalia</option>
+<option value="South Africa">South Africa</option>
+<option value="Spain">Spain</option>
+<option value="Sri Lanka">Sri Lanka</option>
+<option value="Sudan">Sudan</option>
+<option value="Suriname">Suriname</option>
+<option value="Swaziland">Swaziland</option>
+<option value="Sweden">Sweden</option>
+<option value="Switzerland">Switzerland</option>
+<option value="Syria">Syria</option>
+<option value="Tahiti">Tahiti</option>
+<option value="Taiwan">Taiwan</option>
+<option value="Tajikistan">Tajikistan</option>
+<option value="Tanzania">Tanzania</option>
+<option value="Thailand">Thailand</option>
+<option value="Togo">Togo</option>
+<option value="Tokelau">Tokelau</option>
+<option value="Tonga">Tonga</option>
+<option value="Trinidad &amp; Tobago">Trinidad &amp; Tobago</option>
+<option value="Tunisia">Tunisia</option>
+<option value="Turkey">Turkey</option>
+<option value="Turkmenistan">Turkmenistan</option>
+<option value="Turks &amp; Caicos Is">Turks &amp; Caicos Is</option>
+<option value="Tuvalu">Tuvalu</option>
+<option value="Uganda">Uganda</option>
+<option value="Ukraine">Ukraine</option>
+<option value="United Arab Erimates">United Arab Emirates</option>
+<option value="United Kingdom">United Kingdom</option>
+<option value="United States of America">United States of America</option>
+<option value="Uraguay">Uruguay</option>
+<option value="Uzbekistan">Uzbekistan</option>
+<option value="Vanuatu">Vanuatu</option>
+<option value="Vatican City State">Vatican City State</option>
+<option value="Venezuela">Venezuela</option>
+<option value="Vietnam">Vietnam</option>
+<option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
+<option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+<option value="Wake Island">Wake Island</option>
+<option value="Wallis &amp; Futana Is">Wallis &amp; Futana Is</option>
+<option value="Yemen">Yemen</option>
+<option value="Zaire">Zaire</option>
+<option value="Zambia">Zambia</option>
+<option value="Zimbabwe">Zimbabwe</option>
+                                </select>
+                                <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down h-4 w-4 text-gray-400"><path d="m6 9 6 6 6-6"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Currency Field -->
+                        
+                    </div>
+
+                    <!-- Trading Preferences Info -->
+                    <div class="mt-6 p-4 bg-blue-500/10 rounded-xl border border-blue-500/20">
+                        <div class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="info" aria-hidden="true" class="lucide lucide-info w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+                            <div class="text-sm">
+                                <p class="text-blue-300 font-bold mb-1">Regional Trading Information</p>
+                                <p class="text-gray-300">Your location helps us provide region-specific services, meet applicable requirements, and tailor your account experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Security -->
+                <div x-show="currentStep === 2" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-x-4" x-transition:enter-end="opacity-100 transform translate-x-0" style="display: none;">
+
+                    <!-- Step Header -->
+                    <div class="mb-6 p-4 bg-green-500/10 rounded-xl border border-green-500/20">
+                        <div class="flex items-center gap-3">
+                            <div class="p-2 bg-green-500/20 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield-check" aria-hidden="true" class="lucide lucide-shield-check w-5 h-5 text-green-400"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-white">Account Security</h3>
+                                <p class="text-gray-400 text-sm">Secure your trading account</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                        <!-- Password Field -->
+                        <div class="space-y-2">
+                            <label for="password" class="block text-sm font-bold text-gray-200">
+                                Password <span class="text-red-400">*</span>
+                            </label>
+                            <div class="relative group">
+                                <div class="absolute inset-y-0 left-0 flex items-center pl-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="lock" aria-hidden="true" class="lucide lucide-lock h-5 w-5 text-gray-400 group-focus-within:text-blue-400 transition-colors"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                                </div>
+                                <input type="password" name="password" id="password" required="" class="block w-full rounded-xl border border-gray-600 bg-gray-900 pl-12 pr-4 py-4 text-white placeholder-gray-400 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 focus:bg-gray-800 transition-all duration-200 text-sm font-bold" placeholder="Create strong password">
+                            </div>
+                                                    </div>
+
+                        <!-- Confirm Password Field -->
+                        <div class="space-y-2">
+                            <label for="password_confirmation" class="block text-sm font-bold text-gray-200">
+                                Confirm Password <span class="text-red-400">*</span>
+                            </label>
+                            <div class="relative group">
+                                <div class="absolute inset-y-0 left-0 flex items-center pl-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="key" aria-hidden="true" class="lucide lucide-key h-5 w-5 text-gray-400 group-focus-within:text-blue-400 transition-colors"><path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4"></path><path d="m21 2-9.6 9.6"></path><circle cx="7.5" cy="15.5" r="5.5"></circle></svg>
+                                </div>
+                                <input type="password" name="password_confirmation" id="password_confirmation" required="" class="block w-full rounded-xl border border-gray-600 bg-gray-900 pl-12 pr-4 py-4 text-white placeholder-gray-400 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 focus:bg-gray-800 transition-all duration-200 text-sm font-bold" placeholder="Confirm your password">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CAPTCHA Section -->
+                    <div class="space-y-4 mt-6">
+                        <div class="space-y-2">
+                            <label for="captcha" class="block text-sm font-bold text-gray-200">
+                                Simple Math Verification <span class="text-red-400">*</span>
+                            </label>
+
+                            <!-- CAPTCHA Display -->
+                            <div class="bg-gray-800 border border-gray-600 rounded-xl p-4 mb-3">
+                                <div class="flex items-center justify-center">
+                                    <div class="bg-gradient-to-r from-blue-900 to-purple-900 rounded-lg p-4 border border-gray-600">
+                                        <div class="text-center">
+                                            <p class="text-sm text-gray-300 mb-3 font-medium">What is the answer to this simple math?</p>
+                                            <div class="bg-gray-900 rounded-lg px-8 py-4 border border-gray-700">
+                                                <span class="text-3xl font-bold text-green-400 tracking-wide select-none" style="font-family: &#39;Arial&#39;, sans-serif;">
+                                                    <span id="captchaQuestion">7 + 3 = ?</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CAPTCHA Input -->
+                            <div class="relative group">
+                                <div class="absolute inset-y-0 left-0 flex items-center pl-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="calculator" aria-hidden="true" class="lucide lucide-calculator h-5 w-5 text-gray-400 group-focus-within:text-blue-400 transition-colors"><rect width="16" height="20" x="4" y="2" rx="2"></rect><line x1="8" x2="16" y1="6" y2="6"></line><line x1="16" x2="16" y1="14" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg>
+                                </div>
+                                <input type="number" name="captcha" id="captcha" required="" class="block w-full rounded-xl border border-gray-600 bg-gray-900 pl-12 pr-4 py-4 text-white placeholder-gray-400 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 focus:bg-gray-800 transition-all duration-200 text-sm font-bold text-center" placeholder="Enter the answer (numbers only)" autocomplete="off" min="0" max="99">
+                            </div>
+
+                            
+                            <!-- Helper text -->
+                            <p class="text-xs text-gray-400 flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="info" aria-hidden="true" class="lucide lucide-info w-3 h-3"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+                                Just solve this simple math problem to verify you're human. Much easier than typing random codes!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Hidden CAPTCHA confirmation -->
+                    <input type="hidden" name="captcha_confirmation" id="captchaAnswer" value="10">
+
+                    
+                    <!-- Password Requirements -->
+                    <div class="mt-6 p-4 bg-gray-800/50 rounded-xl border border-gray-700">
+                        <p class="text-sm font-bold text-gray-200 mb-2">Password Requirements:</p>
+                        <ul class="text-xs text-gray-300 space-y-1">
+                            <li class="flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-3 h-3 text-green-400"><path d="M20 6 9 17l-5-5"></path></svg>
+                                At least 8 characters long
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-3 h-3 text-green-400"><path d="M20 6 9 17l-5-5"></path></svg>
+                                Contains uppercase and lowercase letters
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-3 h-3 text-green-400"><path d="M20 6 9 17l-5-5"></path></svg>
+                                Includes at least one number or special character
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Terms Agreement -->
+                    <div class="mt-6 p-6 bg-blue-500/10 rounded-xl border border-blue-500/20">
+                        <div class="flex items-start gap-4">
+                            <div class="flex items-center h-5 mt-1">
+                                <input type="checkbox" name="agree" id="agree" required="" class="h-4 w-4 rounded border-gray-600 bg-gray-900 text-blue-500 focus:ring-2 focus:ring-blue-400/20 transition-colors">
+                            </div>
+                            <div class="flex-1">
+                                <label for="agree" class="text-sm font-bold text-gray-200 leading-relaxed">
+                                    I agree to nexus MARKETS's
+                                    <a href="https://auth.nexusmarkets.net/rules" target="_blank" class="text-blue-400 hover:text-blue-300 font-bold underline underline-offset-2">
+                                        Terms and Conditions
+                                    </a>
+                                    and acknowledge that I have read and understood the
+                                    <a href="https://auth.nexusmarkets.net/register#" target="_blank" class="text-blue-400 hover:text-blue-300 font-bold underline underline-offset-2">
+                                        Privacy Policy
+                                    </a>
+                                </label>
+                                <p class="text-xs text-gray-400 mt-2">
+                                    By creating an account, you confirm that you are at least 18 years old and agree to receive trading updates and market insights.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enhanced Navigation Buttons -->
+                <div class="flex flex-col sm:flex-row justify-between items-center mt-10 pt-8 border-t border-gray-700 gap-4">
+                    <!-- Previous Button -->
+                    <button type="button" @click="previousStep()" x-show="currentStep &gt; 0" class="inline-flex items-center gap-2 px-6 py-3 text-gray-400 hover:text-white transition-all duration-200 rounded-xl hover:bg-gray-800/50 group" style="display: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-left" aria-hidden="true" class="lucide lucide-arrow-left w-4 h-4 group-hover:-translate-x-1 transition-transform"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
+                        <span class="font-bold">Previous Step</span>
+                    </button>
+
+                    <!-- Progress Indicator -->
+                    <div class="flex items-center gap-2 text-sm text-gray-400">
+                        <span x-text="`Step ${currentStep + 1} of ${steps.length}`" class="font-bold">Step 1 of 3</span>
+                    </div>
+
+                    <!-- Next Button -->
+                    <button type="button" @click="nextStep()" x-show="currentStep &lt; steps.length - 1" class="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 group">
+                        <span>Continue</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-4 h-4 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    </button>
+
+                    <!-- Create Account Button -->
+                    <button type="submit" x-show="currentStep === steps.length - 1" class="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 group" style="display: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="user-plus" aria-hidden="true" class="lucide lucide-user-plus w-5 h-5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="19" x2="19" y1="8" y2="14"></line><line x1="22" x2="16" y1="11" y2="11"></line></svg>
+                        <span>Create Trading Account</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sparkles" aria-hidden="true" class="lucide lucide-sparkles w-4 h-4 group-hover:rotate-12 transition-transform"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg>
+                    </button>
+                </div>
+
+                <!-- Professional Footer -->
+                <div class="mt-8 text-center space-y-4">
+                    <div class="flex items-center justify-center gap-6 text-sm">
+                        <p class="text-gray-400">
+                            Already have an account?
+                            <a href="https://auth.nexusmarkets.net/login" class="font-bold text-blue-400 hover:text-blue-300 transition-colors underline underline-offset-2">
+                                Sign in here
+                            </a>
+                        </p>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="flex items-center justify-center gap-8 py-4 text-xs text-gray-500">
+                        <div class="flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield" aria-hidden="true" class="lucide lucide-shield w-3 h-3"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+                            <span>SSL Secured</span>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="lock" aria-hidden="true" class="lucide lucide-lock w-3 h-3"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                            <span>256-bit Encryption</span>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="award" aria-hidden="true" class="lucide lucide-award w-3 h-3"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg>
+                            <span>Regulated Platform</span>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-gray-500">
+                        © 2026 nexus MARKETS. All rights reserved. |
+                        Licensed and regulated trading platform.
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    <style>
+        .skiptranslate {
+            display: none !important;
+        }
+        body {
+            top: 0 !important;
+        }
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
+
+    <div id="google_translate_element" style="display:none"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: "en"}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" ></script>
+
+    <script>
+        function registrationForm() {
+            return {
+                currentStep: 0,
+                steps: [
+                    {
+                        title: 'Personal Info',
+                        description: 'Basic details',
+                        completed: false
+                    },
+                    {
+                        title: 'Location',
+                        description: 'Regional settings',
+                        completed: false
+                    },
+                    {
+                        title: 'Security',
+                        description: 'Account protection',
+                        completed: false
+                    }
+                ],
+
+                nextStep() {
+                    if (this.validateCurrentStep()) {
+                        this.steps[this.currentStep].completed = true;
+                        if (this.currentStep < this.steps.length - 1) {
+                            this.currentStep++;
+                            this.scrollToTop();
+                        }
+                    }
+                },
+
+                previousStep() {
+                    if (this.currentStep > 0) {
+                        this.currentStep--;
+                        this.scrollToTop();
+                    }
+                },
+
+                scrollToTop() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                },
+
+                validateCurrentStep() {
+                    const step = this.currentStep;
+                    let isValid = true;
+                    let missingFields = [];
+
+                    if (step === 0) {
+                        // Validate personal information
+                        const fields = [
+                            { id: 'username', name: 'Username' },
+                            { id: 'name', name: 'Full Name' },
+                            { id: 'email', name: 'Email' },
+                            { id: 'phone', name: 'Phone Number' }
+                        ];
+
+                        fields.forEach(field => {
+                            const element = document.getElementById(field.id);
+                            const value = element.value.trim();
+                            if (!value) {
+                                missingFields.push(field.name);
+                                isValid = false;
+                                // Add visual feedback
+                                element.classList.add('border-red-500', 'bg-red-900/20');
+                                element.classList.remove('border-gray-600');
+                            } else {
+                                // Remove error styling if field is now valid
+                                element.classList.remove('border-red-500', 'bg-red-900/20');
+                                element.classList.add('border-gray-600');
+                            }
+                        });
+
+                        // Email validation
+                        const emailElement = document.getElementById('email');
+                        const email = emailElement.value.trim();
+                        if (email && !email.includes('@')) {
+                            missingFields.push('Valid Email Format');
+                            isValid = false;
+                            emailElement.classList.add('border-red-500', 'bg-red-900/20');
+                            emailElement.classList.remove('border-gray-600');
+                        }
+
+                    } else if (step === 1) {
+                        // Validate location
+                        const countryElement = document.getElementById('country');
+                        const country = countryElement.value;
+
+                        if (!country || country === 'Select your country') {
+                            missingFields.push('Country Selection');
+                            isValid = false;
+                            countryElement.classList.add('border-red-500', 'bg-red-900/20');
+                            countryElement.classList.remove('border-gray-600');
+                        } else {
+                            countryElement.classList.remove('border-red-500', 'bg-red-900/20');
+                            countryElement.classList.add('border-gray-600');
+                        }
+
+                    } else if (step === 2) {
+                        // Validate security
+                        const passwordElement = document.getElementById('password');
+                        const confirmPasswordElement = document.getElementById('password_confirmation');
+                        const captchaElement = document.getElementById('captcha');
+                        const agreeElement = document.getElementById('agree');
+
+                        const password = passwordElement.value;
+                        const confirmPassword = confirmPasswordElement.value;
+                        const captcha = captchaElement.value.trim();
+                        const agree = agreeElement.checked;
+
+                        // Password validation
+                        if (!password) {
+                            missingFields.push('Password');
+                            isValid = false;
+                            passwordElement.classList.add('border-red-500', 'bg-red-900/20');
+                        } else if (password.length < 8) {
+                            missingFields.push('Password (minimum 8 characters)');
+                            isValid = false;
+                            passwordElement.classList.add('border-red-500', 'bg-red-900/20');
+                        } else {
+                            passwordElement.classList.remove('border-red-500', 'bg-red-900/20');
+                            passwordElement.classList.add('border-gray-600');
+                        }
+
+                        // Confirm password validation
+                        if (!confirmPassword) {
+                            missingFields.push('Password Confirmation');
+                            isValid = false;
+                            confirmPasswordElement.classList.add('border-red-500', 'bg-red-900/20');
+                        } else if (password !== confirmPassword) {
+                            missingFields.push('Passwords Must Match');
+                            isValid = false;
+                            confirmPasswordElement.classList.add('border-red-500', 'bg-red-900/20');
+                        } else {
+                            confirmPasswordElement.classList.remove('border-red-500', 'bg-red-900/20');
+                            confirmPasswordElement.classList.add('border-gray-600');
+                        }
+
+                        // CAPTCHA validation
+                        if (!captcha) {
+                            missingFields.push('Math Verification Answer');
+                            isValid = false;
+                            captchaElement.classList.add('border-red-500', 'bg-red-900/20');
+                        } else {
+                            captchaElement.classList.remove('border-red-500', 'bg-red-900/20');
+                            captchaElement.classList.add('border-gray-600');
+                        }
+
+                        // Terms agreement validation
+                        if (!agree) {
+                            missingFields.push('Terms & Conditions Agreement');
+                            isValid = false;
+                        }
+                    }
+
+                    if (!isValid) {
+                        const message = missingFields.length === 1
+                            ? `Please provide: ${missingFields[0]}`
+                            : `Please complete these fields: ${missingFields.join(', ')}`;
+
+                        // Show professional alert
+                        this.showAlert('Complete Required Fields', message, 'warning');
+                    }
+
+                    return isValid;
+                },
+
+                showAlert(title, message, type = 'info') {
+                    // Simple alert fallback if SweetAlert2 is not available
+                    if (typeof Swal !== 'undefined') {
+                        Swal.fire({
+                            title: title,
+                            text: message,
+                            icon: type,
+                            confirmButtonText: 'Got it',
+                            confirmButtonColor: '#3B82F6'
+                        });
+                    } else {
+                        alert(`${title}: ${message}`);
+                    }
+                }
+            }
+        }
+
+        // Enhanced initialization with better error handling
+        document.addEventListener('alpine:init', () => {
+            setTimeout(() => {
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                }
+            }, 100);
+        });
+
+        document.addEventListener('alpine:updated', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+
+        // Form submission enhancement
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('register');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    if (submitBtn) {
+                        submitBtn.disabled = true;
+                        submitBtn.innerHTML = '<i data-lucide="loader-2" class="w-4 h-4 animate-spin mr-2"></i>Creating Account...';
+                    }
+                });
+            }
+
+            // Auto-scroll to errors if they exist
+            const errorSummary = document.querySelector('.bg-red-500\\/10');
+            if (errorSummary) {
+                setTimeout(() => {
+                    errorSummary.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+
+                    // Add a subtle shake animation to draw attention
+                    errorSummary.style.animation = 'shake 0.5s ease-in-out';
+                }, 100);
+            }
+        });
+    </script>
+
+    <!-- Add shake animation CSS -->
+    <style>
+        @keyframes  shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+    </style>
+
+
+
+        </div>
+    </div>
+
+    <!-- Professional Trading Ticker -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-gray-900/90 backdrop-blur-md border-t border-gray-200/50 dark:border-gray-700/50 z-40">
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+            {
+                "symbols": [
+                    {"proName": "COINBASE:BTCUSD", "title": "BTC/USD"},
+                    {"proName": "COINBASE:ETHUSD", "title": "ETH/USD"},
+                    {"proName": "FX:EURUSD", "title": "EUR/USD"},
+                    {"proName": "FX:GBPUSD", "title": "GBP/USD"},
+                    {"proName": "FX:USDJPY", "title": "USD/JPY"},
+                    {"proName": "NASDAQ:AAPL", "title": "APPLE"},
+                    {"proName": "TVC:GOLD", "title": "GOLD"}
+                ],
+                "showSymbolLogo": true,
+                "colorTheme": "dark",
+                "isTransparent": true,
+                "displayMode": "adaptive",
+                "locale": "en"
+            }
+            </script>
+            <div class="gtranslate_wrapper gt_container--c8la1f"><!-- GTranslate: https://gtranslate.com --><div id="google_translate_element2"></div><div id="gt_float_wrapper" style="position:fixed;bottom:20px;left:20px;z-index:999999;"><div class="gt_float_switcher notranslate" style="opacity: 1;"><div class="gt_options" style="display:none"><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="af"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/af.png" alt="af"> Afrikaans</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sq"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sq.png" alt="sq"> Albanian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="am"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/am.png" alt="am"> Amharic</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ar"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ar.png" alt="ar"> Arabic</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="hy"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/hy.png" alt="hy"> Armenian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="az"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/az.png" alt="az"> Azerbaijani</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="eu"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/eu.png" alt="eu"> Basque</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="be"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/be.png" alt="be"> Belarusian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="bn"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/bn.png" alt="bn"> Bengali</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="bs"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/bs.png" alt="bs"> Bosnian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="bg"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/bg.png" alt="bg"> Bulgarian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ca"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ca.png" alt="ca"> Catalan</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ceb"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ceb.png" alt="ceb"> Cebuano</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ny"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ny.png" alt="ny"> Chichewa</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="zh-CN"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/zh-CN.png" alt="zh-CN"> Chinese (Simplified)</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="zh-TW"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/zh-TW.png" alt="zh-TW"> Chinese (Traditional)</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="co"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/co.png" alt="co"> Corsican</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="hr"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/hr.png" alt="hr"> Croatian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="cs"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/cs.png" alt="cs"> Czech</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="da"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/da.png" alt="da"> Danish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="nl"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/nl.png" alt="nl"> Dutch</a><a href="https://auth.nexusmarkets.net/register#" class="nturl gt-current" data-gt-lang="en"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/en-us.png" alt="en"> English</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="eo"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/eo.png" alt="eo"> Esperanto</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="et"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/et.png" alt="et"> Estonian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="tl"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/tl.png" alt="tl"> Filipino</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="fi"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/fi.png" alt="fi"> Finnish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="fr"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/fr.png" alt="fr"> French</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="fy"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/fy.png" alt="fy"> Frisian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="gl"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/gl.png" alt="gl"> Galician</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ka"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ka.png" alt="ka"> Georgian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="de"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/de.png" alt="de"> German</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="el"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/el.png" alt="el"> Greek</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="gu"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/gu.png" alt="gu"> Gujarati</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ht"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ht.png" alt="ht"> Haitian Creole</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ha"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ha.png" alt="ha"> Hausa</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="haw"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/haw.png" alt="haw"> Hawaiian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="iw"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/iw.png" alt="iw"> Hebrew</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="hi"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/hi.png" alt="hi"> Hindi</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="hmn"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/hmn.png" alt="hmn"> Hmong</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="hu"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/hu.png" alt="hu"> Hungarian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="is"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/is.png" alt="is"> Icelandic</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ig"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ig.png" alt="ig"> Igbo</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="id"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/id.png" alt="id"> Indonesian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ga"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ga.png" alt="ga"> Irish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="it"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/it.png" alt="it"> Italian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ja"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ja.png" alt="ja"> Japanese</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="jw"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/jw.png" alt="jw"> Javanese</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="kn"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/kn.png" alt="kn"> Kannada</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="kk"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/kk.png" alt="kk"> Kazakh</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="km"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/km.png" alt="km"> Khmer</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ko"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ko.png" alt="ko"> Korean</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ku"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ku.png" alt="ku"> Kurdish (Kurmanji)</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ky"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ky.png" alt="ky"> Kyrgyz</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="lo"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/lo.png" alt="lo"> Lao</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="la"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/la.png" alt="la"> Latin</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="lv"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/lv.png" alt="lv"> Latvian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="lt"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/lt.png" alt="lt"> Lithuanian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="lb"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/lb.png" alt="lb"> Luxembourgish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="mk"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/mk.png" alt="mk"> Macedonian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="mg"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/mg.png" alt="mg"> Malagasy</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ms"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ms.png" alt="ms"> Malay</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ml"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ml.png" alt="ml"> Malayalam</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="mt"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/mt.png" alt="mt"> Maltese</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="mi"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/mi.png" alt="mi"> Maori</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="mr"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/mr.png" alt="mr"> Marathi</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="mn"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/mn.png" alt="mn"> Mongolian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="my"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/my.png" alt="my"> Myanmar (Burmese)</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ne"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ne.png" alt="ne"> Nepali</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="no"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/no.png" alt="no"> Norwegian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ps"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ps.png" alt="ps"> Pashto</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="fa"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/fa.png" alt="fa"> Persian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="pl"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/pl.png" alt="pl"> Polish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="pt"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/pt.png" alt="pt"> Portuguese</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="pa"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/pa.png" alt="pa"> Punjabi</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ro"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ro.png" alt="ro"> Romanian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ru"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ru.png" alt="ru"> Russian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sm"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sm.png" alt="sm"> Samoan</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="gd"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/gd.png" alt="gd"> Scottish Gaelic</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sr"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sr.png" alt="sr"> Serbian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="st"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/st.png" alt="st"> Sesotho</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sn"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sn.png" alt="sn"> Shona</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sd"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sd.png" alt="sd"> Sindhi</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="si"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/si.png" alt="si"> Sinhala</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sk"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sk.png" alt="sk"> Slovak</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sl"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sl.png" alt="sl"> Slovenian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="so"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/so.png" alt="so"> Somali</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="es"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/es.png" alt="es"> Spanish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="su"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/su.png" alt="su"> Sundanese</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sw"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sw.png" alt="sw"> Swahili</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sv"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sv.png" alt="sv"> Swedish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="tg"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/tg.png" alt="tg"> Tajik</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ta"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ta.png" alt="ta"> Tamil</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="te"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/te.png" alt="te"> Telugu</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="th"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/th.png" alt="th"> Thai</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="tr"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/tr.png" alt="tr"> Turkish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="uk"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/uk.png" alt="uk"> Ukrainian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ur"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ur.png" alt="ur"> Urdu</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="uz"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/uz.png" alt="uz"> Uzbek</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="vi"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/vi.png" alt="vi"> Vietnamese</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="cy"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/cy.png" alt="cy"> Welsh</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="xh"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/xh.png" alt="xh"> Xhosa</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="yi"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/yi.png" alt="yi"> Yiddish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="yo"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/yo.png" alt="yo"> Yoruba</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="zu"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/zu.png" alt="zu"> Zulu</a></div><div class="gt-selected"><div class="gt-current-lang"><img src="./NEXUS MARKETS - Create Account_files/en-us.png" alt="en"> <span class="gt-lang-code">en</span> <span class="gt_float_switcher-arrow"></span></div></div></div></div><!-- GTranslate: https://gtranslate.com --><div id="google_translate_element2"></div><div id="gt_float_wrapper" style="position:fixed;bottom:20px;left:20px;z-index:999999;"><div class="gt_float_switcher notranslate" style="opacity: 1;"><div class="gt_options" style="display:none"><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="af"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/af.png" alt="af"> Afrikaans</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sq"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sq.png" alt="sq"> Albanian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="am"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/am.png" alt="am"> Amharic</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ar"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ar.png" alt="ar"> Arabic</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="hy"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/hy.png" alt="hy"> Armenian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="az"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/az.png" alt="az"> Azerbaijani</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="eu"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/eu.png" alt="eu"> Basque</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="be"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/be.png" alt="be"> Belarusian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="bn"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/bn.png" alt="bn"> Bengali</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="bs"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/bs.png" alt="bs"> Bosnian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="bg"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/bg.png" alt="bg"> Bulgarian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ca"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ca.png" alt="ca"> Catalan</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ceb"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ceb.png" alt="ceb"> Cebuano</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ny"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ny.png" alt="ny"> Chichewa</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="zh-CN"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/zh-CN.png" alt="zh-CN"> Chinese (Simplified)</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="zh-TW"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/zh-TW.png" alt="zh-TW"> Chinese (Traditional)</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="co"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/co.png" alt="co"> Corsican</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="hr"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/hr.png" alt="hr"> Croatian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="cs"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/cs.png" alt="cs"> Czech</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="da"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/da.png" alt="da"> Danish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="nl"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/nl.png" alt="nl"> Dutch</a><a href="https://auth.nexusmarkets.net/register#" class="nturl gt-current" data-gt-lang="en"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/en-us.png" alt="en"> English</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="eo"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/eo.png" alt="eo"> Esperanto</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="et"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/et.png" alt="et"> Estonian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="tl"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/tl.png" alt="tl"> Filipino</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="fi"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/fi.png" alt="fi"> Finnish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="fr"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/fr.png" alt="fr"> French</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="fy"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/fy.png" alt="fy"> Frisian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="gl"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/gl.png" alt="gl"> Galician</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ka"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ka.png" alt="ka"> Georgian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="de"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/de.png" alt="de"> German</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="el"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/el.png" alt="el"> Greek</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="gu"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/gu.png" alt="gu"> Gujarati</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ht"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ht.png" alt="ht"> Haitian Creole</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ha"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ha.png" alt="ha"> Hausa</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="haw"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/haw.png" alt="haw"> Hawaiian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="iw"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/iw.png" alt="iw"> Hebrew</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="hi"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/hi.png" alt="hi"> Hindi</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="hmn"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/hmn.png" alt="hmn"> Hmong</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="hu"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/hu.png" alt="hu"> Hungarian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="is"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/is.png" alt="is"> Icelandic</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ig"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ig.png" alt="ig"> Igbo</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="id"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/id.png" alt="id"> Indonesian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ga"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ga.png" alt="ga"> Irish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="it"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/it.png" alt="it"> Italian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ja"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ja.png" alt="ja"> Japanese</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="jw"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/jw.png" alt="jw"> Javanese</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="kn"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/kn.png" alt="kn"> Kannada</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="kk"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/kk.png" alt="kk"> Kazakh</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="km"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/km.png" alt="km"> Khmer</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ko"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ko.png" alt="ko"> Korean</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ku"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ku.png" alt="ku"> Kurdish (Kurmanji)</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ky"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ky.png" alt="ky"> Kyrgyz</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="lo"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/lo.png" alt="lo"> Lao</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="la"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/la.png" alt="la"> Latin</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="lv"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/lv.png" alt="lv"> Latvian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="lt"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/lt.png" alt="lt"> Lithuanian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="lb"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/lb.png" alt="lb"> Luxembourgish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="mk"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/mk.png" alt="mk"> Macedonian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="mg"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/mg.png" alt="mg"> Malagasy</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ms"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ms.png" alt="ms"> Malay</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ml"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ml.png" alt="ml"> Malayalam</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="mt"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/mt.png" alt="mt"> Maltese</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="mi"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/mi.png" alt="mi"> Maori</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="mr"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/mr.png" alt="mr"> Marathi</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="mn"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/mn.png" alt="mn"> Mongolian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="my"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/my.png" alt="my"> Myanmar (Burmese)</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ne"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ne.png" alt="ne"> Nepali</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="no"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/no.png" alt="no"> Norwegian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ps"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ps.png" alt="ps"> Pashto</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="fa"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/fa.png" alt="fa"> Persian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="pl"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/pl.png" alt="pl"> Polish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="pt"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/pt.png" alt="pt"> Portuguese</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="pa"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/pa.png" alt="pa"> Punjabi</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ro"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ro.png" alt="ro"> Romanian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ru"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ru.png" alt="ru"> Russian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sm"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sm.png" alt="sm"> Samoan</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="gd"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/gd.png" alt="gd"> Scottish Gaelic</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sr"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sr.png" alt="sr"> Serbian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="st"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/st.png" alt="st"> Sesotho</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sn"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sn.png" alt="sn"> Shona</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sd"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sd.png" alt="sd"> Sindhi</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="si"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/si.png" alt="si"> Sinhala</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sk"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sk.png" alt="sk"> Slovak</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sl"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sl.png" alt="sl"> Slovenian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="so"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/so.png" alt="so"> Somali</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="es"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/es.png" alt="es"> Spanish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="su"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/su.png" alt="su"> Sundanese</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sw"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sw.png" alt="sw"> Swahili</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sv"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sv.png" alt="sv"> Swedish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="tg"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/tg.png" alt="tg"> Tajik</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ta"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ta.png" alt="ta"> Tamil</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="te"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/te.png" alt="te"> Telugu</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="th"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/th.png" alt="th"> Thai</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="tr"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/tr.png" alt="tr"> Turkish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="uk"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/uk.png" alt="uk"> Ukrainian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ur"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ur.png" alt="ur"> Urdu</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="uz"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/uz.png" alt="uz"> Uzbek</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="vi"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/vi.png" alt="vi"> Vietnamese</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="cy"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/cy.png" alt="cy"> Welsh</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="xh"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/xh.png" alt="xh"> Xhosa</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="yi"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/yi.png" alt="yi"> Yiddish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="yo"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/yo.png" alt="yo"> Yoruba</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="zu"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/zu.png" alt="zu"> Zulu</a></div><div class="gt-selected"><div class="gt-current-lang"><img src="./NEXUS MARKETS - Create Account_files/en-us.png" alt="en"> <span class="gt-lang-code">en</span> <span class="gt_float_switcher-arrow"></span></div></div></div></div></div>
+<script>
+    window.gtranslateSettings = {
+        default_language: "en",
+        alt_flags:{"en":"usa"},
+        wrapper_selector: ".gtranslate_wrapper",
+        flag_style: "3d",
+    };
+</script>
+<script src="./NEXUS MARKETS - Create Account_files/float.js.download" defer=""></script>
+        </div>
+    </div>
+
+    <!-- Initialize Scripts -->
+    <script>
+        // Set dark mode as default if no preference is stored
+        if (!localStorage.getItem('theme')) {
+            localStorage.setItem('theme', 'dark');
+            document.documentElement.classList.add('dark');
+        }
+
+        // Initialize theme
+        document.addEventListener('alpine:init', () => {
+            Alpine.store('theme', {
+                init() {
+                    // Default to dark if no preference is set
+                    this.darkMode = localStorage.getItem('theme') === 'dark' || !localStorage.getItem('theme');
+                    this.updateTheme();
+                },
+                darkMode: true, // Set default to true
+                toggle() {
+                    this.darkMode = !this.darkMode;
+                    this.updateTheme();
+                },
+                updateTheme() {
+                    localStorage.setItem('theme', this.darkMode ? 'dark' : 'light');
+                    document.documentElement.classList.toggle('dark', this.darkMode);
+                }
+            });
+        });
+
+        // Initialize Lucide icons
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+
+        // Re-initialize icons after Alpine updates
+        document.addEventListener('alpine:updated', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    </script>
+ <!-- Language Selector -->
+    <div class="gtranslate_wrapper gt_container--c8la1f"><!-- GTranslate: https://gtranslate.com --><div id="google_translate_element2"></div><div id="gt_float_wrapper" style="position:fixed;bottom:20px;left:20px;z-index:999999;"><div class="gt_float_switcher notranslate" style="opacity: 1;"><div class="gt_options" style="display:none"><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="af"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/af.png" alt="af"> Afrikaans</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sq"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sq.png" alt="sq"> Albanian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="am"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/am.png" alt="am"> Amharic</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ar"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ar.png" alt="ar"> Arabic</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="hy"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/hy.png" alt="hy"> Armenian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="az"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/az.png" alt="az"> Azerbaijani</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="eu"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/eu.png" alt="eu"> Basque</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="be"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/be.png" alt="be"> Belarusian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="bn"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/bn.png" alt="bn"> Bengali</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="bs"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/bs.png" alt="bs"> Bosnian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="bg"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/bg.png" alt="bg"> Bulgarian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ca"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ca.png" alt="ca"> Catalan</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ceb"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ceb.png" alt="ceb"> Cebuano</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ny"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ny.png" alt="ny"> Chichewa</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="zh-CN"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/zh-CN.png" alt="zh-CN"> Chinese (Simplified)</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="zh-TW"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/zh-TW.png" alt="zh-TW"> Chinese (Traditional)</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="co"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/co.png" alt="co"> Corsican</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="hr"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/hr.png" alt="hr"> Croatian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="cs"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/cs.png" alt="cs"> Czech</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="da"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/da.png" alt="da"> Danish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="nl"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/nl.png" alt="nl"> Dutch</a><a href="https://auth.nexusmarkets.net/register#" class="nturl gt-current" data-gt-lang="en"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/en-us.png" alt="en"> English</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="eo"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/eo.png" alt="eo"> Esperanto</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="et"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/et.png" alt="et"> Estonian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="tl"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/tl.png" alt="tl"> Filipino</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="fi"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/fi.png" alt="fi"> Finnish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="fr"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/fr.png" alt="fr"> French</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="fy"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/fy.png" alt="fy"> Frisian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="gl"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/gl.png" alt="gl"> Galician</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ka"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ka.png" alt="ka"> Georgian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="de"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/de.png" alt="de"> German</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="el"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/el.png" alt="el"> Greek</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="gu"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/gu.png" alt="gu"> Gujarati</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ht"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ht.png" alt="ht"> Haitian Creole</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ha"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ha.png" alt="ha"> Hausa</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="haw"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/haw.png" alt="haw"> Hawaiian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="iw"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/iw.png" alt="iw"> Hebrew</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="hi"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/hi.png" alt="hi"> Hindi</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="hmn"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/hmn.png" alt="hmn"> Hmong</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="hu"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/hu.png" alt="hu"> Hungarian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="is"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/is.png" alt="is"> Icelandic</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ig"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ig.png" alt="ig"> Igbo</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="id"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/id.png" alt="id"> Indonesian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ga"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ga.png" alt="ga"> Irish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="it"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/it.png" alt="it"> Italian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ja"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ja.png" alt="ja"> Japanese</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="jw"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/jw.png" alt="jw"> Javanese</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="kn"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/kn.png" alt="kn"> Kannada</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="kk"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/kk.png" alt="kk"> Kazakh</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="km"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/km.png" alt="km"> Khmer</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ko"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ko.png" alt="ko"> Korean</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ku"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ku.png" alt="ku"> Kurdish (Kurmanji)</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ky"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ky.png" alt="ky"> Kyrgyz</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="lo"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/lo.png" alt="lo"> Lao</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="la"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/la.png" alt="la"> Latin</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="lv"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/lv.png" alt="lv"> Latvian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="lt"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/lt.png" alt="lt"> Lithuanian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="lb"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/lb.png" alt="lb"> Luxembourgish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="mk"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/mk.png" alt="mk"> Macedonian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="mg"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/mg.png" alt="mg"> Malagasy</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ms"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ms.png" alt="ms"> Malay</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ml"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ml.png" alt="ml"> Malayalam</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="mt"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/mt.png" alt="mt"> Maltese</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="mi"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/mi.png" alt="mi"> Maori</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="mr"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/mr.png" alt="mr"> Marathi</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="mn"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/mn.png" alt="mn"> Mongolian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="my"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/my.png" alt="my"> Myanmar (Burmese)</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ne"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ne.png" alt="ne"> Nepali</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="no"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/no.png" alt="no"> Norwegian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ps"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ps.png" alt="ps"> Pashto</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="fa"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/fa.png" alt="fa"> Persian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="pl"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/pl.png" alt="pl"> Polish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="pt"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/pt.png" alt="pt"> Portuguese</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="pa"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/pa.png" alt="pa"> Punjabi</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ro"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ro.png" alt="ro"> Romanian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ru"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ru.png" alt="ru"> Russian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sm"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sm.png" alt="sm"> Samoan</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="gd"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/gd.png" alt="gd"> Scottish Gaelic</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sr"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sr.png" alt="sr"> Serbian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="st"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/st.png" alt="st"> Sesotho</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sn"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sn.png" alt="sn"> Shona</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sd"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sd.png" alt="sd"> Sindhi</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="si"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/si.png" alt="si"> Sinhala</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sk"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sk.png" alt="sk"> Slovak</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sl"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sl.png" alt="sl"> Slovenian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="so"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/so.png" alt="so"> Somali</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="es"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/es.png" alt="es"> Spanish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="su"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/su.png" alt="su"> Sundanese</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sw"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sw.png" alt="sw"> Swahili</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sv"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sv.png" alt="sv"> Swedish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="tg"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/tg.png" alt="tg"> Tajik</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ta"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ta.png" alt="ta"> Tamil</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="te"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/te.png" alt="te"> Telugu</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="th"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/th.png" alt="th"> Thai</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="tr"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/tr.png" alt="tr"> Turkish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="uk"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/uk.png" alt="uk"> Ukrainian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ur"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ur.png" alt="ur"> Urdu</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="uz"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/uz.png" alt="uz"> Uzbek</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="vi"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/vi.png" alt="vi"> Vietnamese</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="cy"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/cy.png" alt="cy"> Welsh</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="xh"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/xh.png" alt="xh"> Xhosa</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="yi"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/yi.png" alt="yi"> Yiddish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="yo"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/yo.png" alt="yo"> Yoruba</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="zu"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/zu.png" alt="zu"> Zulu</a></div><div class="gt-selected"><div class="gt-current-lang"><img src="./NEXUS MARKETS - Create Account_files/en-us.png" alt="en"> <span class="gt-lang-code">en</span> <span class="gt_float_switcher-arrow"></span></div></div></div></div><!-- GTranslate: https://gtranslate.com --><div id="google_translate_element2"></div><div id="gt_float_wrapper" style="position:fixed;bottom:20px;left:20px;z-index:999999;"><div class="gt_float_switcher notranslate" style="opacity: 1;"><div class="gt_options" style="display:none"><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="af"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/af.png" alt="af"> Afrikaans</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sq"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sq.png" alt="sq"> Albanian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="am"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/am.png" alt="am"> Amharic</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ar"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ar.png" alt="ar"> Arabic</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="hy"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/hy.png" alt="hy"> Armenian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="az"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/az.png" alt="az"> Azerbaijani</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="eu"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/eu.png" alt="eu"> Basque</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="be"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/be.png" alt="be"> Belarusian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="bn"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/bn.png" alt="bn"> Bengali</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="bs"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/bs.png" alt="bs"> Bosnian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="bg"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/bg.png" alt="bg"> Bulgarian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ca"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ca.png" alt="ca"> Catalan</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ceb"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ceb.png" alt="ceb"> Cebuano</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ny"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ny.png" alt="ny"> Chichewa</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="zh-CN"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/zh-CN.png" alt="zh-CN"> Chinese (Simplified)</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="zh-TW"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/zh-TW.png" alt="zh-TW"> Chinese (Traditional)</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="co"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/co.png" alt="co"> Corsican</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="hr"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/hr.png" alt="hr"> Croatian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="cs"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/cs.png" alt="cs"> Czech</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="da"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/da.png" alt="da"> Danish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="nl"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/nl.png" alt="nl"> Dutch</a><a href="https://auth.nexusmarkets.net/register#" class="nturl gt-current" data-gt-lang="en"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/en-us.png" alt="en"> English</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="eo"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/eo.png" alt="eo"> Esperanto</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="et"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/et.png" alt="et"> Estonian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="tl"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/tl.png" alt="tl"> Filipino</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="fi"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/fi.png" alt="fi"> Finnish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="fr"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/fr.png" alt="fr"> French</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="fy"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/fy.png" alt="fy"> Frisian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="gl"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/gl.png" alt="gl"> Galician</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ka"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ka.png" alt="ka"> Georgian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="de"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/de.png" alt="de"> German</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="el"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/el.png" alt="el"> Greek</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="gu"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/gu.png" alt="gu"> Gujarati</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ht"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ht.png" alt="ht"> Haitian Creole</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ha"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ha.png" alt="ha"> Hausa</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="haw"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/haw.png" alt="haw"> Hawaiian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="iw"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/iw.png" alt="iw"> Hebrew</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="hi"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/hi.png" alt="hi"> Hindi</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="hmn"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/hmn.png" alt="hmn"> Hmong</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="hu"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/hu.png" alt="hu"> Hungarian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="is"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/is.png" alt="is"> Icelandic</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ig"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ig.png" alt="ig"> Igbo</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="id"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/id.png" alt="id"> Indonesian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ga"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ga.png" alt="ga"> Irish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="it"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/it.png" alt="it"> Italian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ja"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ja.png" alt="ja"> Japanese</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="jw"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/jw.png" alt="jw"> Javanese</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="kn"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/kn.png" alt="kn"> Kannada</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="kk"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/kk.png" alt="kk"> Kazakh</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="km"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/km.png" alt="km"> Khmer</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ko"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ko.png" alt="ko"> Korean</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ku"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ku.png" alt="ku"> Kurdish (Kurmanji)</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ky"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ky.png" alt="ky"> Kyrgyz</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="lo"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/lo.png" alt="lo"> Lao</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="la"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/la.png" alt="la"> Latin</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="lv"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/lv.png" alt="lv"> Latvian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="lt"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/lt.png" alt="lt"> Lithuanian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="lb"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/lb.png" alt="lb"> Luxembourgish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="mk"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/mk.png" alt="mk"> Macedonian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="mg"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/mg.png" alt="mg"> Malagasy</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ms"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ms.png" alt="ms"> Malay</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ml"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ml.png" alt="ml"> Malayalam</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="mt"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/mt.png" alt="mt"> Maltese</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="mi"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/mi.png" alt="mi"> Maori</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="mr"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/mr.png" alt="mr"> Marathi</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="mn"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/mn.png" alt="mn"> Mongolian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="my"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/my.png" alt="my"> Myanmar (Burmese)</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ne"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ne.png" alt="ne"> Nepali</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="no"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/no.png" alt="no"> Norwegian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ps"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ps.png" alt="ps"> Pashto</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="fa"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/fa.png" alt="fa"> Persian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="pl"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/pl.png" alt="pl"> Polish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="pt"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/pt.png" alt="pt"> Portuguese</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="pa"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/pa.png" alt="pa"> Punjabi</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ro"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ro.png" alt="ro"> Romanian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ru"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ru.png" alt="ru"> Russian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sm"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sm.png" alt="sm"> Samoan</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="gd"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/gd.png" alt="gd"> Scottish Gaelic</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sr"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sr.png" alt="sr"> Serbian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="st"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/st.png" alt="st"> Sesotho</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sn"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sn.png" alt="sn"> Shona</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sd"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sd.png" alt="sd"> Sindhi</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="si"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/si.png" alt="si"> Sinhala</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sk"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sk.png" alt="sk"> Slovak</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sl"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sl.png" alt="sl"> Slovenian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="so"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/so.png" alt="so"> Somali</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="es"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/es.png" alt="es"> Spanish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="su"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/su.png" alt="su"> Sundanese</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sw"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sw.png" alt="sw"> Swahili</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="sv"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/sv.png" alt="sv"> Swedish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="tg"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/tg.png" alt="tg"> Tajik</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ta"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ta.png" alt="ta"> Tamil</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="te"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/te.png" alt="te"> Telugu</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="th"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/th.png" alt="th"> Thai</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="tr"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/tr.png" alt="tr"> Turkish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="uk"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/uk.png" alt="uk"> Ukrainian</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="ur"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ur.png" alt="ur"> Urdu</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="uz"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/uz.png" alt="uz"> Uzbek</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="vi"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/vi.png" alt="vi"> Vietnamese</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="cy"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/cy.png" alt="cy"> Welsh</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="xh"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/xh.png" alt="xh"> Xhosa</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="yi"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/yi.png" alt="yi"> Yiddish</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="yo"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/yo.png" alt="yo"> Yoruba</a><a href="https://auth.nexusmarkets.net/register#" class="nturl" data-gt-lang="zu"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/zu.png" alt="zu"> Zulu</a></div><div class="gt-selected"><div class="gt-current-lang"><img src="./NEXUS MARKETS - Create Account_files/en-us.png" alt="en"> <span class="gt-lang-code">en</span> <span class="gt_float_switcher-arrow"></span></div></div></div></div></div>
+<script>
+    window.gtranslateSettings = {
+        default_language: "en",
+        alt_flags:{"en":"usa"},
+        wrapper_selector: ".gtranslate_wrapper",
+        flag_style: "3d",
+    };
+</script>
+<script src="./NEXUS MARKETS - Create Account_files/float.js.download" defer=""></script>
+    <!-- Language Selector -->
+    <!--<div class="gtranslate_wrapper"></div>
+<script>
+    window.gtranslateSettings = {
+        default_language: "en",
+        alt_flags:{"en":"usa"},
+        wrapper_selector: ".gtranslate_wrapper",
+        flag_style: "3d",
+    };
+</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+-->
+
+
+</div><script>
+// Dynamic math captcha: generates a fresh question client-side instead of
+// shipping a static "7 + 3 = ?" with the answer hardcoded in the page source.
+// This is a bot deterrent only (the backend does not check this field), but
+// a hardcoded answer visible in view-source defeated the purpose entirely.
+(function(){
+  const a = 1 + Math.floor(Math.random() * 9);
+  const b = 1 + Math.floor(Math.random() * 9);
+  const questionEl = document.getElementById('captchaQuestion');
+  const answerEl = document.getElementById('captchaAnswer');
+  if (questionEl) questionEl.textContent = `${a} + ${b} = ?`;
+  if (answerEl) answerEl.value = String(a + b);
+  const form = document.querySelector('form[action$="/register"]');
+  const captchaInput = document.getElementById('captcha');
+  if (form && captchaInput) {
+    form.addEventListener('submit', (event) => {
+      if (Number(captchaInput.value) !== (a + b)) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        captchaInput.setCustomValidity('That answer is not correct. Please try again.');
+        captchaInput.reportValidity();
+        captchaInput.focus();
+        captchaInput.addEventListener('input', () => captchaInput.setCustomValidity(''), { once: true });
+      }
+    });
+  }
+})();
+</script>
+<script>(() => {
+  const saveSession = (payload) => {
+    if (payload?.token) localStorage.setItem('nexus_token', payload.token);
+    if (payload?.user) localStorage.setItem('nexus_user', JSON.stringify(payload.user));
+  };
+
+  const showMessage = (form, message, ok = false) => {
+    let box = form.querySelector('[data-api-message]');
+    if (!box) {
+      box = document.createElement('div');
+      box.dataset.apiMessage = '1';
+      box.setAttribute('role', 'alert');
+      box.className = 'mb-4 rounded-xl border px-4 py-3 text-sm';
+      form.prepend(box);
+    }
+    box.className = `mb-4 rounded-xl border px-4 py-3 text-sm ${ok ? 'border-green-500/30 bg-green-500/10 text-green-300' : 'border-red-500/30 bg-red-500/10 text-red-300'}`;
+    box.textContent = message;
+    box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+
+  const setBusy = (form, busy) => {
+    const button = form.querySelector('button[type="submit"]');
+    if (!button) return;
+    if (!button.dataset.originalText) button.dataset.originalText = button.textContent.trim();
+    button.disabled = busy;
+    button.style.opacity = busy ? '0.7' : '';
+    button.textContent = busy ? 'Please wait…' : button.dataset.originalText;
+  };
+
+  document.querySelectorAll('form[action^="/api/auth/"]').forEach(form => {
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      setBusy(form, true);
+      try {
+        const data = Object.fromEntries(new FormData(form).entries());
+        if (form.action.endsWith('/register') && !data.agree) {
+          showMessage(form, 'Please accept the terms before creating your account.');
+          return;
+        }
+        const response = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const payload = await response.json().catch(() => ({ error: 'We could not complete your request. Please try again.' }));
+        if (!response.ok) throw new Error(payload.error || 'We could not complete your request. Please try again.');
+        saveSession(payload);
+        showMessage(form, form.action.endsWith('/register') ? 'Account created successfully. Redirecting…' : 'Signed in successfully. Redirecting…', true);
+        setTimeout(() => { window.location.href = '/kyc.html'; }, 500);
+      } catch (error) {
+        showMessage(form, error.message || 'We could not complete your request. Please try again.');
+      } finally {
+        setBusy(form, false);
+      }
+    });
+  });
+})();
+</script>
+<script src="/chatbot-widget.js" defer></script>
+</body></html>

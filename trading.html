@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trading Dashboard — Nexus Markets</title>
+<style>
+:root{--bg:#07111d;--panel:#0d1b2a;--panel2:#102235;--line:#24384d;--text:#eef5fb;--muted:#9db0c2;--accent:#38bdf8;--good:#36d399;--bad:#fb7185}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#06101b,#0a1624);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}a{color:inherit;text-decoration:none}.nav{height:70px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:#07111df2;position:sticky;top:0;z-index:5}.brand{font-weight:800;letter-spacing:.08em}.navlinks{display:flex;gap:22px;color:var(--muted);font-size:14px}.navlinks a:hover{color:white}.wrap{max-width:1250px;margin:0 auto;padding:28px 20px 60px}.banner{background:#0d2433;border:1px solid #24506a;border-radius:14px;padding:12px 16px;color:#bfeaff;font-size:13px;margin-bottom:20px}.grid{display:grid;grid-template-columns:1.5fr 1fr;gap:18px}.card{background:linear-gradient(180deg,var(--panel),#0a1725);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 14px 40px #0004}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.stat{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:15px}.stat small{display:block;color:var(--muted);margin-bottom:7px}.stat strong{font-size:22px}.markets{margin-top:18px}.market{display:grid;grid-template-columns:1.2fr .8fr 110px 110px;gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid #203347}.market:last-child{border-bottom:0}.market small{display:block;color:var(--muted)}button{border:0;border-radius:9px;padding:10px 13px;font-weight:700;cursor:pointer}.buy{background:var(--good);color:#052016}.sell{background:var(--bad);color:#26050b}.ghost{background:#15283a;color:#dce9f3;border:1px solid var(--line)}input,select{width:100%;background:#081522;color:white;border:1px solid var(--line);border-radius:9px;padding:11px;margin-top:7px}.ordergrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.section-title{display:flex;justify-content:space-between;align-items:center}.muted{color:var(--muted);font-size:13px}.tablewrap{overflow:auto}.table{width:100%;border-collapse:collapse;font-size:13px}.table th,.table td{text-align:left;padding:11px;border-bottom:1px solid #1e3042;white-space:nowrap}.table th{color:var(--muted);font-weight:600}.positive{color:var(--good)}.negative{color:var(--bad)}.toast{min-height:22px;margin-top:12px;color:#bfeaff}.warning{color:#f8d68a}.footer-note{margin-top:18px;color:var(--muted);font-size:12px;line-height:1.6}@media(max-width:900px){.grid{grid-template-columns:1fr}.navlinks{display:none}}@media(max-width:600px){.stats{grid-template-columns:1fr}.market{grid-template-columns:1fr 1fr}.market button{width:100%}}
+.hidden{display:none}
+</style></head>
+<body>
+<header class="nav"><a class="brand" href="/index.html">NEXUS MARKETS</a><nav class="navlinks"><a href="/markets.html">Markets</a><a href="/education.html">Education</a><a href="/kyc.html">Verification</a><a href="#" id="logout">Sign out</a></nav></header>
+<main class="wrap">
+<div class="banner"><strong>Staging Trading Mode</strong> — This account is connected to the Nexus pre-launch environment. Orders are not sent to a live broker or exchange.</div>
+<div class="grid">
+<section>
+<div class="card"><div class="section-title"><div><h1 style="margin:0 0 5px">Trading Dashboard</h1><div class="muted">Manage orders, positions and risk in the Nexus trading workspace.</div></div><button class="ghost" id="reset">Reset account</button></div>
+<div class="stats" style="margin-top:18px"><div class="stat"><small>Available cash</small><strong id="cash">—</strong></div><div class="stat"><small>Account equity</small><strong id="equity">—</strong></div><div class="stat"><small>Realized P&amp;L</small><strong id="realized">—</strong></div></div><div class="muted" style="margin-top:10px">Account <span id="accountNo">—</span></div></div>
+<div class="card markets"><div class="section-title"><h2 style="margin:0">Markets</h2><span class="muted">Market quotes</span></div><div id="markets"></div></div><div class="card" style="margin-top:18px"><div class="section-title"><h2 style="margin:0">Deposit Funds</h2><span class="muted">BTC • USDT • SOL</span></div><p class="muted">Deposits are crypto-only. Send funds only on the exact network shown below. Your trading balance is credited only after verification.</p><div class="ordergrid"><label>Asset<select id="depositAsset"><option value="BTC">Bitcoin (BTC)</option><option value="USDT">Tether (USDT)</option><option value="SOL">Solana (SOL)</option></select></label><label>Network<select id="depositNetwork"></select></label></div><div style="margin-top:12px"><label>Receiving wallet<input id="depositAddress" readonly></label><button class="ghost" id="copyWallet" style="margin-top:8px">Copy wallet address</button></div><div class="ordergrid" style="margin-top:12px"><label>Amount<input id="depositAmount" type="number" min="0" step="any" placeholder="Amount sent"></label><label>Transaction hash<input id="depositTx" type="text" placeholder="Blockchain transaction hash"></label></div><button class="buy" id="submitDeposit" style="margin-top:12px">Submit deposit for verification</button><div id="depositMsg" class="toast"></div><div id="depositHistory" class="tablewrap" style="margin-top:12px"></div></div>
+<div class="card" id="positionsCard" style="margin-top:18px"><div class="section-title"><h2 style="margin:0">Open Positions</h2><span class="muted">Updated on refresh</span></div><div id="positions" class="tablewrap" style="margin-top:12px"></div></div>
+<div class="card" id="tradesCard" style="margin-top:18px"><div class="section-title"><h2 style="margin:0">Trade History</h2></div><div id="trades" class="tablewrap" style="margin-top:12px"></div></div>
+</section>
+<aside>
+<div class="card" id="analyticsCard"><h2 style="margin-top:0">Analytics</h2><p class="muted">Live chart for the selected market, powered by TradingView.</p><div id="tv-mini-chart" style="height:220px"></div></div>
+<div class="card" style="margin-top:18px"><h2 style="margin-top:0">Place an Order</h2><p class="muted">Orders are executed in the Nexus pre-launch environment using the current market quote.</p>
+<div class="ordergrid"><label>Market<select id="symbol"></select></label><label>Side<select id="side"><option value="buy">Buy</option><option value="sell">Sell</option></select></label></div>
+<label style="display:block;margin-top:12px">Quantity<input id="qty" type="number" min="0.000001" step="0.000001" value="0.01"></label>
+<div class="actions"><button class="buy" id="buy">Buy</button><button class="sell" id="sell">Sell</button></div><div id="msg" class="toast"></div>
+<div class="footer-note"><strong>Staging account:</strong> This workspace is for controlled pre-launch validation. This account is in a controlled pre-launch environment. Orders are not sent to a live broker.</div>
+</div>
+</aside>
+</div></main>
+<script>
+const token=localStorage.getItem('nexus_token'); if(!token) location.href='/login.html?next=/trading.html';
+const $=id=>document.getElementById(id); const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2}).format(Number(n)||0);
+async function api(url,opt={}){opt.headers={...(opt.headers||{}),'Authorization':'Bearer '+token,'Content-Type':'application/json','Accept':'application/json'};const r=await fetch(url,opt);const d=await r.json().catch(()=>({}));if(!r.ok)throw new Error(d.error||'We could not complete your request.');return d}
+let marketData=[];let depositWallets=[];
+async function loadDepositWallets(){const d=await api('/api/funding/wallets');depositWallets=d.wallets||[];updateDepositNetwork();}
+function updateDepositNetwork(){const asset=$('depositAsset').value;const rows=depositWallets.filter(w=>w.asset===asset);$('depositNetwork').innerHTML=rows.length?rows.map(w=>`<option value="${w.network}">${w.network}</option>`).join(''):'<option value="">Unavailable</option>';const w=rows[0];$('depositAddress').value=w?w.address:'';}
+async function loadDepositHistory(){const d=await api('/api/funding/deposits');$('depositHistory').innerHTML=d.deposits.length?`<h3>Recent deposits</h3><table class="table"><tr><th>Asset</th><th>Network</th><th>Amount</th><th>Status</th><th>Submitted</th></tr>${d.deposits.map(x=>`<tr><td>${x.asset}</td><td>${x.network}</td><td>${x.amount??'—'}</td><td>${x.status}</td><td>${new Date(x.submitted_at).toLocaleString()}</td></tr>`).join('')}</table>`:'<p class="muted">No deposits submitted yet.</p>'}
+async function submitDeposit(){const asset=$('depositAsset').value,network=$('depositNetwork').value;const amount=$('depositAmount').value,tx_hash=$('depositTx').value.trim();$('depositMsg').textContent='Submitting deposit for verification…';try{const d=await api('/api/funding/deposits',{method:'POST',body:JSON.stringify({asset,network,amount,tx_hash})});$('depositMsg').textContent=d.message; $('depositAmount').value='';$('depositTx').value='';await loadDepositHistory();}catch(e){$('depositMsg').textContent=e.message}}
+
+async function loadMarkets(){const d=await fetch('/api/trading/markets').then(r=>r.json());marketData=d.markets; $('symbol').innerHTML=marketData.map(m=>`<option value="${m.symbol}">${m.symbol} — ${m.name}</option>`).join('');$('markets').innerHTML=marketData.map(m=>`<div class="market"><div><strong>${m.symbol}</strong><small>${m.name}</small></div><strong>${m.price}</strong><button class="buy" onclick="quick('buy','${m.symbol}')">Buy</button><button class="sell" onclick="quick('sell','${m.symbol}')">Sell</button></div>`).join('')}
+async function loadAccount(){const d=await api('/api/trading/account');$('cash').textContent=money(d.account.cash_balance);$('equity').textContent=money(d.account.equity);$('accountNo').textContent=d.account.account_number;$('realized').textContent=money(d.account.realized_pnl);$('positions').innerHTML=d.positions.length?`<table class="table"><tr><th>Symbol</th><th>Qty</th><th>Avg. Price</th><th>Current</th><th>P&L</th></tr>${d.positions.map(p=>`<tr><td>${p.symbol}</td><td>${p.quantity}</td><td>${p.average_price}</td><td>${p.current_price}</td><td class="${p.unrealized_pnl>=0?'positive':'negative'}">${money(p.unrealized_pnl)}</td></tr>`).join('')}</table>`:'<p class="muted">No open positions.</p>'}
+async function loadTrades(){const d=await api('/api/trading/trades');$('trades').innerHTML=d.trades.length?`<table class="table"><tr><th>Time</th><th>Symbol</th><th>Side</th><th>Qty</th><th>Price</th><th>Realized P&L</th></tr>${d.trades.map(t=>`<tr><td>${new Date(t.created_at).toLocaleString()}</td><td>${t.symbol}</td><td>${t.side.toUpperCase()}</td><td>${t.quantity}</td><td>${t.price}</td><td class="${t.realized_pnl>=0?'positive':'negative'}">${money(t.realized_pnl)}</td></tr>`).join('')}</table>`:'<p class="muted">No trades yet.</p>'}
+async function place(side){$('msg').textContent='Processing your order…';try{const d=await api('/api/trading/orders',{method:'POST',body:JSON.stringify({symbol:$('symbol').value,side,quantity:Number($('qty').value)})});$('msg').textContent=d.message;await Promise.all([loadMarkets(),loadAccount(),loadTrades()]);}catch(e){$('msg').textContent=e.message}}
+$('depositAsset').onchange=updateDepositNetwork;$('depositNetwork').onchange=()=>{const w=depositWallets.find(x=>x.asset===$('depositAsset').value&&x.network===$('depositNetwork').value);$('depositAddress').value=w?w.address:''};$('copyWallet').onclick=async()=>{try{await navigator.clipboard.writeText($('depositAddress').value);$('depositMsg').textContent='Wallet address copied.'}catch{ $('depositMsg').textContent='Copy is unavailable on this device.'}};$('submitDeposit').onclick=submitDeposit;window.quick=(side,symbol)=>{$('symbol').value=symbol;$('side').value=side;place(side)};$('buy').onclick=()=>place('buy');$('sell').onclick=()=>place('sell');$('reset').onclick=async()=>{if(!confirm('Reset your staging account balance and remove all positions and trades?'))return;try{await api('/api/trading/reset',{method:'POST'});$('msg').textContent='Account reset successfully.';await Promise.all([loadMarkets(),loadAccount(),loadTrades()])}catch(e){$('msg').textContent=e.message}};$('logout').onclick=e=>{e.preventDefault();localStorage.removeItem('nexus_token');localStorage.removeItem('nexus_user');location.href='/login.html'};
+function symbolToTv(sym){const map={BTCUSD:'COINBASE:BTCUSD',ETHUSD:'COINBASE:ETHUSD',EURUSD:'FX:EURUSD',GBPUSD:'FX:GBPUSD',XAUUSD:'TVC:GOLD'};return map[sym]||'COINBASE:BTCUSD'}
+function mountMiniChart(sym){const el=$('tv-mini-chart');if(!el)return;el.innerHTML='';const c=document.createElement('div');c.className='tradingview-widget-container';c.style.height='100%';const w=document.createElement('div');w.className='tradingview-widget-container__widget';w.style.height='100%';c.appendChild(w);const s=document.createElement('script');s.src='https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js';s.async=true;s.innerHTML=JSON.stringify({symbol:symbolToTv(sym),width:'100%',height:220,locale:'en',dateRange:'1D',colorTheme:'dark',isTransparent:false,autosize:true});c.appendChild(s);el.appendChild(c)}
+$('symbol').addEventListener('change',()=>mountMiniChart($('symbol').value));
+
+// Admin-controlled dashboard access: hide gated sections/assets for this
+// user's tier. Never affects account balance, positions or trade history —
+// those always come from the real ledger.
+async function applyAccess(){
+  try{
+    const r=await fetch('/api/access/me',{headers:{Authorization:'Bearer '+token}});
+    if(!r.ok) return {};
+    const d=await r.json();
+    const f=d.features||{};
+    if(f.demo_trading===false){
+      document.querySelector('main.wrap').innerHTML='<div class="card"><h2 style="margin-top:0">Trading workspace is not available on your account yet</h2><p class="muted">Please contact support or complete verification to unlock the trading workspace.</p></div>';
+      throw new Error('trading_disabled');
+    }
+    if(f.analytics_charts===false) $('analyticsCard').classList.add('hidden');
+    if(f.crypto_prices===false) { const m=$('markets'); if(m) m.parentElement.classList.add('hidden'); }
+    if(f.portfolio_summary===false) { ['cash','equity','accountNo','realized'].forEach(id=>{const el=$(id);if(el){const card=el.closest('.card');if(card)card.classList.add('hidden')}}); }
+    if(f.open_positions===false && $('positionsCard')) $('positionsCard').classList.add('hidden');
+    if(f.trade_history===false && $('tradesCard')) $('tradesCard').classList.add('hidden');
+    if(f.funding_history===false) { const h=$('depositHistory'); if(h){const card=h.closest('.card');if(card)card.classList.add('hidden');} }
+    if(f.ai_chatbot===false) { document.querySelectorAll('#chatbot-widget,.chatbot-widget,[id*=chatbot]').forEach(el=>el.classList.add('hidden')); }
+    return f;
+  }catch(e){ if(e.message==='trading_disabled') throw e; return {} }
+}
+
+(async()=>{
+  try{
+    const features=await applyAccess();
+    await loadMarkets();
+    mountMiniChart($('symbol').value||'BTCUSD');
+    await loadDepositWallets();
+    if(features.deposits_btc===false||features.deposits_usdt===false||features.deposits_sol===false){
+      const blocked={BTC:features.deposits_btc,USDT:features.deposits_usdt,SOL:features.deposits_sol};
+      depositWallets=depositWallets.filter(w=>blocked[w.asset]!==false);
+      Array.from($('depositAsset').options).forEach(o=>{if(blocked[o.value]===false)o.remove()});
+      updateDepositNetwork();
+    }
+    await Promise.all([loadAccount(),loadTrades(),loadDepositHistory()])
+  }catch(e){
+    if(e.message!=='trading_disabled') document.body.innerHTML='<main class="wrap"><div class="card"><h2>We could not load your trading workspace.</h2><p class="muted">Please sign in again and try once more.</p></div></main>'
+  }
+})();
+</script><script src="/chatbot-widget.js" defer></script>
+</body></html>
