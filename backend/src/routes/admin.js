@@ -214,8 +214,7 @@ router.get('/users', adminAuth, async (_req, res) => {
     res.status(500).json({
       error: 'Unable to load users'
     });
-  }
-});
+};
 
 
 /* =========================
@@ -262,7 +261,7 @@ router.get('/kyc', adminAuth, async (_req, res) => {
       error: 'Unable to load KYC records'
     });
   }
-});
+};
 
 
 /* =========================
