@@ -112,8 +112,40 @@ async function updateKycStatus(req, res) {
     });
   }
 
+  const client = await pool.connect();
+
   try {
-    const result = await pool.query(
+    await client.query('BEGIN');
+
+    // Make sure the customer access tier exists.
+    await client.query(`
+      ALTER TABLE public.users
+      ADD COLUMN IF NOT EXISTS tier VARCHAR(20) NOT NULL DEFAULT 'standard'
+    `);
+
+    // Find the KYC record and its customer.
+    const kycResult = await client.query(
+      `
+      SELECT id, user_id
+      FROM public.kyc_profiles
+      WHERE id = $1
+      FOR UPDATE
+      `,
+      [id]
+    );
+
+    if (kycResult.rowCount === 0) {
+      await client.query('ROLLBACK');
+
+      return res.status(404).json({
+        error: 'KYC record not found'
+      });
+    }
+
+    const userId = kycResult.rows[0].user_id;
+
+    // Update KYC status.
+    const result = await client.query(
       `
       UPDATE public.kyc_profiles
       SET
@@ -122,30 +154,43 @@ async function updateKycStatus(req, res) {
         reviewed_at = CASE
           WHEN $1 = 'pending' THEN NULL
           ELSE NOW()
+        END,
+        reviewed_by = CASE
+          WHEN $1 = 'pending' THEN NULL
+          ELSE $3
         END
-      WHERE id = $3
+      WHERE id = $4
       RETURNING
         id,
         user_id,
         status,
         review_note,
         submitted_at,
-        reviewed_at
+        reviewed_at,
+        reviewed_by
       `,
-      [status, reviewNote, id]
+      [status, reviewNote, req.admin.email, id]
     );
 
-    if (result.rowCount === 0) {
-      return res.status(404).json({
-        error: 'KYC record not found'
-      });
+    // Approved KYC unlocks the verified customer tier.
+    if (status === 'approved') {
+      await client.query(
+        `
+        UPDATE public.users
+        SET tier = 'verified'
+        WHERE id = $1
+        `,
+        [userId]
+      );
     }
+
+    await client.query('COMMIT');
 
     return res.json({
       success: true,
       message:
         status === 'approved'
-          ? 'Customer KYC approved successfully'
+          ? 'Customer KYC approved successfully and trading access unlocked'
           : status === 'rejected'
             ? 'Customer KYC rejected'
             : 'Customer KYC returned to pending',
@@ -153,100 +198,22 @@ async function updateKycStatus(req, res) {
     });
 
   } catch (error) {
+    await client.query('ROLLBACK').catch(() => {});
+
     console.error('Admin KYC update error:', error);
 
     return res.status(500).json({
-  error: 'Unable to update KYC record',
-  code: error.code || null,
-  detail: error.detail || null,
-  constraint: error.constraint || null,
-  message: error.message || null
-});
+      error: 'Unable to update KYC record',
+      code: error.code || null,
+      detail: error.detail || null,
+      constraint: error.constraint || null,
+      message: error.message || null
+    });
+
+  } finally {
+    client.release();
   }
 }
-
-router.post('/kyc/:id/status', adminAuth, updateKycStatus);
-router.patch('/kyc/:id', adminAuth, updateKycStatus);
-
-
-router.get('/wallets', adminAuth, async (_req, res) => {
-  try {
-    const result = await pool.query(`SELECT id, asset, network, address, label, is_active, updated_by, updated_at FROM deposit_wallets ORDER BY CASE asset WHEN 'BTC' THEN 1 WHEN 'USDT' THEN 2 WHEN 'SOL' THEN 3 ELSE 9 END, network`);
-    res.json({ wallets: result.rows });
-  } catch (error) {
-    console.error('Admin wallets error:', error);
-    res.status(500).json({ error: 'Unable to load deposit wallets' });
-  }
-});
-
-router.put('/wallets/:id', adminAuth, async (req, res) => {
-  const id = Number.parseInt(req.params.id, 10);
-  const address = String(req.body?.address || '').trim();
-  const label = req.body?.label == null ? null : String(req.body.label).trim();
-  const isActive = req.body?.is_active !== false;
-  if (!Number.isInteger(id) || id < 1) return res.status(400).json({ error: 'Invalid wallet ID' });
-  if (!address || address.length > 255) return res.status(400).json({ error: 'A valid public wallet address is required' });
-  try {
-    const result = await pool.query(`UPDATE deposit_wallets SET address=$1,label=$2,is_active=$3,updated_by=$4,updated_at=NOW() WHERE id=$5 RETURNING id,asset,network,address,label,is_active,updated_by,updated_at`, [address,label,isActive,req.admin.email,id]);
-    if (!result.rowCount) return res.status(404).json({ error: 'Deposit wallet not found' });
-    res.json({ wallet: result.rows[0] });
-  } catch (error) {
-    console.error('Admin wallet update error:', error);
-    res.status(500).json({ error: 'Unable to update deposit wallet' });
-  }
-});
-
-router.post('/wallets', adminAuth, async (req, res) => {
-  const asset = String(req.body?.asset || '').trim().toUpperCase();
-  const network = String(req.body?.network || '').trim().toUpperCase();
-  const address = String(req.body?.address || '').trim();
-  const label = req.body?.label == null ? null : String(req.body.label).trim();
-  if (!['BTC','USDT','SOL'].includes(asset)) return res.status(400).json({ error: 'Only BTC, USDT and SOL deposit wallets are supported' });
-  if (!network || !address) return res.status(400).json({ error: 'Network and public wallet address are required' });
-  try {
-    const result = await pool.query(`INSERT INTO deposit_wallets(asset,network,address,label,updated_by) VALUES($1,$2,$3,$4,$5) RETURNING id,asset,network,address,label,is_active,updated_by,updated_at`, [asset,network,address,label,req.admin.email]);
-    res.status(201).json({ wallet: result.rows[0] });
-  } catch (error) {
-    if (error.code === '23505') return res.status(409).json({ error: 'A wallet for that asset and network already exists' });
-    console.error('Admin wallet create error:', error);
-    res.status(500).json({ error: 'Unable to create deposit wallet' });
-  }
-});
-
-router.get('/deposits', adminAuth, async (_req, res) => {
-  try {
-    const result = await pool.query(`SELECT d.id,d.asset,d.network,d.wallet_address,d.amount,d.tx_hash,d.status,d.review_note,d.submitted_at,d.reviewed_at,u.email,u.username,a.account_number FROM crypto_deposits d JOIN accounts a ON a.id=d.account_id JOIN users u ON u.id=a.user_id ORDER BY d.submitted_at DESC LIMIT 200`);
-    res.json({ deposits: result.rows });
-  } catch (error) {
-    console.error('Admin deposits error:', error);
-    res.status(500).json({ error: 'Unable to load deposits' });
-  }
-});
-
-router.post('/deposits/:id/status', adminAuth, async (req, res) => {
-  const id = Number.parseInt(req.params.id, 10);
-  const { status, review_note } = req.body || {};
-  if (!Number.isInteger(id) || id < 1) return res.status(400).json({ error: 'Invalid deposit ID' });
-  if (!['submitted','under_review','confirmed','rejected'].includes(status)) return res.status(400).json({ error: 'Invalid deposit status' });
-  const client = await pool.connect();
-  try {
-    await client.query('BEGIN');
-    const current = await client.query(`SELECT id,status,amount,asset,network,account_id FROM crypto_deposits WHERE id=$1 FOR UPDATE`, [id]);
-    if (!current.rowCount) throw Object.assign(new Error('Deposit not found'), {status:404});
-    const d=current.rows[0];
-    if (d.status === 'confirmed' && status !== 'confirmed') throw Object.assign(new Error('A confirmed deposit cannot be moved back to another status'), {status:409});
-    if (status === 'confirmed' && (d.amount == null || Number(d.amount) <= 0)) throw Object.assign(new Error('A deposit amount is required before confirmation'), {status:400});
-    // Confirmation records that the submitted deposit has passed the current admin review.
-    // It intentionally does NOT credit the trading balance yet: the amount is denominated in the deposited crypto asset,
-    // and a production credit requires verified on-chain settlement plus a trusted USD valuation/conversion policy.
-    const updated=await client.query(`UPDATE crypto_deposits SET status=$1,review_note=$2,reviewed_at=CASE WHEN $1 IN ('confirmed','rejected') THEN NOW() ELSE NULL END WHERE id=$3 RETURNING id,asset,network,amount,tx_hash,status,review_note,reviewed_at`, [status,review_note?String(review_note).trim():null,id]);
-    await client.query('COMMIT');
-    res.json({deposit:updated.rows[0]});
-  } catch(error) {
-    await client.query('ROLLBACK').catch(()=>{});
-    console.error('Admin deposit status error:',error);
-    res.status(error.status||500).json({error:error.message||'Unable to update deposit'});
-  } finally { client.release(); }
 });
 
 
