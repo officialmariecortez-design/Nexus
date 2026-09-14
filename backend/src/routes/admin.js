@@ -156,11 +156,12 @@ async function updateKycStatus(req, res) {
     console.error('Admin KYC update error:', error);
 
     return res.status(500).json({
-      error: 'Unable to update KYC record',
-      code: error.code || null,
-      detail: error.detail || null,
-      constraint: error.constraint || null
-    });
+  error: 'Unable to update KYC record',
+  code: error.code || null,
+  detail: error.detail || null,
+  constraint: error.constraint || null,
+  message: error.message || null
+});
   }
 }
 
